@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Jersey+15&family=Playwrite+IN&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --primary-color: #19c0a9;
+  --secondary-color: #ff7676;
+  --balck-color: #333;
+  --white-color:#fff;
+}
+
+*{
+    /* color: red; */
+    /* background-color: lightseagreen; */
+   
+  }
+
+.hira{
+    color: var(--primary-color) ;
+    font-size: 20px;
+    font-weight: bold;
+}
+h1{
+  color: red;
+}
+
+.parent > .child > h1{
+  color: var(--secondary-color);
+ background-color: white;
+}
+
+.hover:hover{
+  color: lightslategray;
+  background-color: white;
+}
+
+a:visited{
+  color:green;
+}
+
+a:link{
+  color: red;
+  text-decoration: none;
+}
+
+a:active{
+  color:burlywood
+}
+
+.line:before{
+  content: "this appers first";
+  color: red;
+  font-size: 20px;
+}
+
+.line:after{
+  content: "this appers last";
+  color: blue;
+  font-size: 20px;
+}
+
+.lines p::first-letter{
+  color: red;
+  font-size: 42px;
+}
+
+.lines P::selection{
+  color: greenyellow;
+}
+
+ul li::marker{
+  color: red;
+  content: " * ";
+}
+
+/* box model */
+
+.box{
+  border: 5px solid red;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+
+  box-shadow: 1px 2px 3px 4px black;
+
+
+}
+
+.box .box2{
+  border: 3px solid lightsalmon;
+  height: 200px;
+  width: 200px;
+  background-color: lime;
+  /* margin: 10px 20px 30px 40px; */
+  border-radius: 50%;
+  padding: 30px 40px;
+}
+
+
+/* text formating */
+
+.textFormating{
+  height: 300px;
+  width: 200px;
+  /* text-align: center; */
+  /* text-align: justify; */
+  /* text-align: left; */
+  /* text-align: right; */
+  text-transform: lowercase;
+
+  /* text-overflow: clip; */
+  overflow: hidden;
+  /* text-indent: 30px; */
+
+  font-size: 20px;
+  /* font-weight: 900;
+  font-style:oblique; */
+  font-family: "Poppins", serif;
+  /* line-height: 1.5;
+  letter-spacing: 10px;
+  word-spacing: 3px; */
+  /* line-break: anywhere; */
+  /* line-break: loose; */
+  /* line-break: auto;
+  line-break: strict;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+
+
+/* icon in html */
+
+.icons{
+  font-size: 30px;
+}
+.fa-brands{
+  font-size: 30px;
+}
+
+.icons:hover{
+  color: blue;
+}
+
+
+/* background Image */
+
+.images{
+  background-image: url('../img/landscape.jpg');
+  height: 100vh;
+  width: 100wh;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  /* background-size: contain; */
+  /* background-size: auto; */
+  /* background-position: left; */
+  /* background-position: right; */
+  /* background-position: center; */
+  /* background-position: top; */
+  /* background-position: bottom; */
+  /* background-attachment: fixed; */
+  /* background-attachment: scroll; */
+
+}
+
+.images h1{
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* display  */
+
+.MainBox{
+  background-color: lightskyblue;
+  padding: 20px;
+  margin: 20px;
+  height: 100vh;
+  position: relative;
+}
+
+.card1, .card2, .card3, .card4, .card5{
+  padding: 20px;
+  margin: 20px;
+ 
+}
+
+.MainBox .card1{
+  background-color: lightcoral;
+  /* position: static; */
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+.MainBox .card2{
+  background-color: lightcyan;
+  /* position:fixed;
+  top: 0; */
+  /* bottom: 0; */
+  /* left:80px; */
+  position:absolute;
+  left:0;
+  top: 0;
+  
+}
+
+.MainBox .card3{
+  background-color: lightgreen;
+  /* position:sticky; */
+  position:absolute;
+  /* top: 0; */
+  bottom:0;
+  left:0;
+
+}
+
+.MainBox .card4{
+  background-color: lightseagreen;
+  /* position: relative;
+      top:30px;
+      right:20px; */
+      position: absolute;
+      bottom:50%;
+      right:50%;
+}
+
+.MainBox .card5{
+  background-color: lightyellow;
+  position:absolute;
+  /* top:0; */
+  bottom:0;
+  right:0;
+}
+
+
+
+/* test card */
+
+.testCard{
+  height: 100vh;
+  background-color: lightcoral;
+}
+
+/* animation */
+
+.anima{
+  background-color: lightsalmon;
+  height: 200px;
+  width: 200px;
+  
+}
+.anima:hover{
+  /* transform: scale(1.5,1.5); */
+  /* transform: rotate(45deg); */
+  /* transform: matrix(1,0.5,0.5,1,0,0); */
+  transform: perspective(1000px) rotateY(45deg);
+  transition: 1.5s ease-in-out all;
+}
+
+
+/* animation  */
+
+.animation{
+  padding: 20px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border:10px solid black;
+  animation: pulse 5s ease-in-out infinite;
+}
+
+
+@keyframes pulse{
+  0%{
+    background-color: red;
+    transition:  2s ease-in-out all;
+  }
+
+  100%{
+    background-color: blue;
+    transition: ease-in-out 2s all;
+  }
+}
+
+
+@keyframes moving{
+  0%{
+    transform: rotate(30deg);
+    transition: 3s ease all;
+  }
+  10%{
+    transform:rotate(60deg);
+    transition: 3s ease all;
+  }
+  20%{
+    transform: rotate(90deg);
+    transition: 3s ease all;
+  }
+  30%{
+    transform: rotate(120deg);
+    transition: 3s ease;
+  }
+  40%{
+    transform: rotate(150deg);
+    transition: 3s ease all;
+  }
+  50%{
+    transform: rotate(180deg);
+    transition: 3s ease all;
+  }
+  60%{
+    transform: rotate(210deg);
+    transition: 3s ease all;
+  }
+  70%{
+    transform: rotate(240deg);
+    transition: 3s ease all;
+  }
+  80%{
+    transform: rotate(270deg);
+    transition: 3s ease all;
+  }
+  90%{
+    transform: rotate(300deg);
+    transition: 3s ease all;
+  }
+  100%{
+    transform: rotate(360deg);
+    transition: 3s ease all;
+  }
+}
+
+.headingSize{
+  font-size: 60px;
+}
+
+/*  responsive  */
+
+@media(max-width: 768px){
+   body{
+    background-color: lightcoral;
+   }
+
+   .headingSize{
+    font-size: 20px;
+   }
+}
+
+@media(max-width: 578px){
+  body{
+    background-color: lightgreen;
+  }
+  .headingSize{
+    font-size: 40px;
+   }
+}
