@@ -76,7 +76,7 @@
     - Attribute are similar in kind they are declared inside opening tag after the tagname is declared and attribute uses  name=" " as all attribute are declared in similar way. 
     - here are some attribute listed
         name= " "
-        direction=" "
+        direction=" 
         height = " "
         width =" "
         class = " "
