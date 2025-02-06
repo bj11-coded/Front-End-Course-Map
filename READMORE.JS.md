@@ -289,6 +289,169 @@
 
 
   ## Assignment Operators
+    - Assignment operators assign values to JavaScript variables.
+    - the decleartion should not be seprated
+    
+    ### 1. = 
+    let a = "a";
+    console.log(a);
+
+    ### 2. += ( x + y = x )
+
+    let a = 3;
+    a+= 4;
+    console.log(a);
+
+    ### 3. -= ( x - y = x )
+
+    let a = 3;
+    a-= 4;
+    console.log(a);
+
+    ### 4. *= ( x * y = x )
+
+    let a = 3;
+    a*= 4;
+    console.log(a);
+
+    ### 5. /= ( x / y = x)
+
+    let a = 3;
+    a/= 4;
+    console.log(a);
+
+    ### 6. **= ( x**y = x)
+
+    let a = 3;
+    a**= 4;
+    console.log(a);
+
+
+    ### 7. %= (x % y = x)
+
+    let a = 3;
+    a%= 4;
+    console.log(a);
+
+  ## Comparison Operators
+    - comparision operator are used for the logical decision either yes or no or True or false
+
+    ### 1. ==
+      - it compares given value.
+      - the decleartion should not be seprated
+
+      console.log( 3 == 3 )
+
+    ### 2. === 
+      - it compares the value and dataType
+      - if the values are same but the datatype is different then it prints false.
+      - the decleartion should not be seprated
+
+        console.log( 3 === 3 )    // true
+        console.log( 3 === "3" )   // false
+
+      - the first 3 is a number datatype and the 2nd one is string dataType although the value is same it prints false as it checks both the value and datatype.
+
+    ### 3. != ( not Equal to )
+      - the not Eaual to checks the value only and prints the opposite logic ( if it's true then it print false and vice versa )
+      - it is same as == and prints opposite.
+      - the decleartion should not be seprated
+
+      console.log( 3 != 3 )         // false
+
+    ### 4. !== ( not Equal to Equal to )
+      - the !== ( not eual to equal to ) is same as === as it checks both datatype and value but prints the opposite logic.
+      - the declaration of !== should not be seprated like this ! = =
+
+      console.log( 3 !== 3);     // false
+      console.log( 3 !== "3")
+
+    ### 5. > ( Grater Then )
+      - it shows which value is greater
+
+      console.log( 3 > 3 )    // false
+      console.log( 4 > 3 )    // true 
+
+    ### 6. < ( less then )
+      - it shows which value is less and print the logical answer
+
+        console.log( 3 < 3 )    // false
+        conosle.log( 3 < 4 )    // true
+
+    ### 7. <= ( less then Eaual to )
+      - it shows which value is less and equal to and print the logical answer
+      - the decleartion should not be seprated
+
+        console.log( 3 <= 3 )    // true
+        conosle.log( 3 <= 4 )    // true
+
+    ### 8. >= ( Grater then Eaual to )
+      - it shows which value is less and equal to and print the logical answer
+      - the decleartion should not be seprated
+
+        console.log( 3 >= 3 )    // true
+        conosle.log( 3 >= 4 )    // false
+
+  ## Logical operator
+    - logical operators prints the logical value as true or false
+
+    ### && ( and and )
+      - && insures all the condition are satisfied 
+      - unless every condtion is satisfied it doesnot print true
+
+        console.log( 2 >= 2 && 3 < 2  && 2 == 2);   // false
+
+    ### || ( or or )
+      - || insures one of the condition is true and prints the true value 
+
+        console.log( 2 >= 2 || 3 < 2 || 2 == 2);    // true
+
+  ## Ternery Operator ( ? )
+    - Ternery Operator is used to perform if else condition only 
+    - it assigns a value to a variable based on some condition.
+
+      console.log( 2 == 2 ? "equal xa": "xina");
+      
+####  -----------------------------------------------------------------------------------------------
+
+# Conditional Statement 
+  - Conditional statement are those which checks the condtion and prints the true condition statement
+  - the basic syntex of condtional statement is:
+
+    if( condition ){
+
+      //code here
+    
+    }
+  
+  - There are 4 conditional statment and they are discussed below 
+
+  ## if condtion
+  - if condition checks the true condtion only and prints the single output 
+  - Syntex:
+
+     if( condition ){
+
+      //code here
+    
+    }
+
+  #### Example:
+
+    if( 3 > 4 ){
+      document.getElementById('ifcondition').innerHTML = " Yappy !!! ";
+    }
+
+
+
+ 
+
+
+
+
+
+
+
     
 
 
