@@ -560,7 +560,7 @@
   - when certain code is written within the block is called a function
   - function can be defined as function keyword or as a variable 
   - function runs when we call the function 
-  - Syntex:
+    Syntex:
 
     function funName (){
 
@@ -590,3 +590,37 @@
         console.log( a + b)
       }
       f(4,5);
+
+  ## ES6 arrow function
+  - Es6 model is the new model that implements differnet features in javascript
+  - Es6 model has introduced new arrow function which is based on arrow model
+  - in Arrow function normal variable is defined as variable says its a function when a () is inside the variable
+
+  sytnex: 
+    const f = () => {
+      console.log("this is function");
+    }
+    f();
+
+    when no parameter is defined it is called non-parametraized arrow function
+    when parameter is defined it is call parametraized arrow function
+
+    const f = (param) => {
+      console.log("this is function", param);
+    }
+    f("arrow");
+
+
+  ### Example 
+    const fun = (param1, param2) =>{
+      if(param1 > param2){
+        console.log("the param is valid")
+      }else{
+        console.log("param is not valid")
+      }
+    }
+
+    let param1 = prompt("Enter the 1st value");
+    let param2 = prompt("Enter the 2nd value");
+    fun( param1,param2);
+  
