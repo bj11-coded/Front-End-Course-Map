@@ -596,19 +596,19 @@
   - Es6 model has introduced new arrow function which is based on arrow model
   - in Arrow function normal variable is defined as variable says its a function when a () is inside the variable
 
-  sytnex: 
-    const f = () => {
-      console.log("this is function");
-    }
-    f();
+  ### sytnex: 
+        const f = () => {
+          console.log("this is function");
+        }
+        f();
+  
+  - when no parameter is defined it is called non-parametraized arrow function
+  - when parameter is defined it is call parametraized arrow function
 
-    when no parameter is defined it is called non-parametraized arrow function
-    when parameter is defined it is call parametraized arrow function
-
-    const f = (param) => {
-      console.log("this is function", param);
-    }
-    f("arrow");
+        const f = (param) => {
+          console.log("this is function", param);
+        }
+        f("arrow");
 
 
   ### Example 
@@ -632,86 +632,87 @@
   
     Dummy object 
 
-    const obj = { name: "Ram" };
-    console.log(typeof(obj));
+        const obj = { name: "Ram" };
+        console.log(typeof(obj));
 
-    here name is a property where ram is a string value.
+        here name is a property where ram is a string value.
   
   - to print ram we should target the property
 
-      console.log(obj.name);
+        console.log(obj.name);
 
-      Example
+    ### Example
 
-      const obj = { 
-        name: "Ram",
-        country: "aayodha",
-      };
-      console.log(typeof(obj))
-      console.log(obj.name);
-      document.getElementsByTagName('p')[1].innerHTML = obj.name;
-      document.getElementsByTagName('p')[2].innerHTML = obj.country;
-      const para1 =document.getElementsByTagName('p')[0]
-      para1.style.padding = "20px";
-      para1.innerHTML = JSON.stringify(obj);
+        const obj = { 
+          name: "Ram",
+          country: "aayodha",
+        };
+        console.log(typeof(obj))
+        console.log(obj.name);
+        document.getElementsByTagName('p')[1].innerHTML = obj.name;
+        document.getElementsByTagName('p')[2].innerHTML = obj.country;
+        const para1 =document.getElementsByTagName('p')[0]
+        para1.style.padding = "20px";
+        para1.innerHTML = JSON.stringify(obj);
 
   - Add items on object 
 
-      obj.wife = "sita";
-      console.log(obj);
-      para1.innerHTML = JSON.stringify(obj);
+          obj.wife = "sita";
+          console.log(obj);
+          para1.innerHTML = JSON.stringify(obj);
 
   - delete items on object
 
-    delete obj.country;
-    console.log(obj);
-    para1.innerHTML = JSON.stringify(obj);
+        delete obj.country;
+        console.log(obj);
+        para1.innerHTML = JSON.stringify(obj);
 
   - freez object 
 
-    Object.freeze(obj)
-    obj.brother = "laxamn"
-    para1.innerHTML = JSON.stringify(obj);
+        Object.freeze(obj)
+        obj.brother = "laxamn"
+        para1.innerHTML = JSON.stringify(obj);
 
 
   - Object method is used to declare an Object with the new keyword
   - it creates an empty object.
 
-    const objOne = new Object();
-    console.log(objOne);
+            const objOne = new Object();
+            console.log(objOne);
 
-    const objOne = new Object();
-    objOne.name = "butwal"
-    objOne.address = "Buspark"
-    objOne.ward = 8
-    objOne.lives = true
-    console.log(objOne);
+            const objOne = new Object();
+            objOne.name = "butwal"
+            objOne.address = "Buspark"
+            objOne.ward = 8
+            objOne.lives = true
+            console.log(objOne);
 
-  - suppose we have an object as:
+    - suppose we have an object as:
 
-      const objOne = {
-        name:"butwal",
-        address: { 
-          pernament: "palpa",
-          temprory:"butwal"
-        },
-        ward: 8,
-        livesThere = true
-      }
+            const objOne = {
+              name:"butwal",
+              address: { 
+                pernament: "palpa",
+                temprory:"butwal"
+              },
+              ward: 8,
+              livesThere = true
+            }
 
     - while creating an object inside an object we should use new Object() method
 
-      const objOne = new Object();
-      objOne.name = "butwal"
-      objOne.address = new Object();
-      objOne.address.pernament = "palpa"
-      objOne.address.temprory = "butwal"
-      objOne.ward = 8
-      objOne.lives = true
-      console.log(objOne);
+    ### Example
+        const objOne = new Object();
+        objOne.name = "butwal"
+        objOne.address = new Object();
+        objOne.address.pernament = "palpa"
+        objOne.address.temprory = "butwal"
+        objOne.ward = 8
+        objOne.lives = true
+        console.log(objOne);
 
 
-  ## constructor
+## constructor
   - While many object of same type are created we use object Constructor function
   - it creates object of similar type and can be use multiple time 
   - it uses this keyword to denote the object and access it 
@@ -719,6 +720,8 @@
   - this is used while creating a constructor
   - always keep the constructor name in capitalization format
 
+  ### Example
+  
     function Animal ( name, action ){
       this.name = name;
       this.action = action;
@@ -731,5 +734,136 @@
 
     const animalOne = new Animal ( "Dog","Barks");
     console.log(animalOne)
+
+
+# class Based Constructor
+  - it is based on the object orianted programming.
+  - class and constructor key is used to create an object 
+  - we can lern about encapsulation, inheritance 
+  - Redability of code is done using constructor
+
+   ### Example
+
+    class Animal{
+      constructor( name , action ){
+        this.name = name
+        this.action = action 
+      }
+
+      dog(){
+        return `${this.name} is ${this.action} at some one `;
+      }
+
+      cat(){
+        return `${this.name} are so ${this.action} `;
+      }
+    }
+
+    const AnimalOne = new Animal( "camal" ,"staring");
+    const AnimalTwo = new Animal( "cat" ,"Adorable");
+    console.log(AnimalOne.dog());
+    console.log(AnimalTwo.cat());
+
+  
+  ### Inheritance 
+  - inheritanace menas inheritaing others property that mean  parent child concept
+  - the object hat is inheritated by parents can be inheritaed by children
+  - we extend main class into another class 
+  - super is used to inherit the property to another class
+
+    ### Example:
+
+        class Animal{
+          constructor( name , action ){
+            this.name = name
+            this.action = action 
+          }
+
+          dog(){
+            return `${this.name} is ${this.action} at some one `;
+          }
+
+          cat(){
+            return `${this.name} are so ${this.action} `;
+          }
+        }
+
+
+        class WildAnimal extends Animal{
+          constructor(name, action, food ){
+            super(name, action)
+            this.food = food
+          }
+
+          tiger(){
+            return  `${this.name} is  ${this.action} ${this.food} after hunting an animal`
+          }
+
+        } 
+
+        const AnimalOne = new Animal( "camal" ,"staring");
+        const AnimalTwo = new Animal( "cat" ,"Adorable");
+        const WildAnimalOne = new WildAnimal("Tiger", "Eating","Meat")
+        console.log(AnimalOne.dog());
+        console.log(AnimalTwo.cat());
+        console.log(WildAnimalOne.tiger());
+
+
+# Array
+  - Array is collection of similar data
+  - Arrary is represented by [ ] but the typeof is an object.
+
+       console.log( [ ])
+  
+  - Array is used in the collection of large amount of data like api 
+
+      let array = [1,2,3,4,5,6,7]
+       console.log(array[0]);
+
+  - where elemnts inside an array is counted on the basis of index it is stored in 
+    - index: element
+    - 0 = 1
+    - 1 = 2
+    - 2 = 3
+    - 3 = 4
+    - 4 = 5
+    - 5 = 6
+    - 6 = 7 
+
+    - so if i have to show 4 then i have to target index 3
+
+          let array = [1,2,3,4,5,6,7]
+          console.log(array[3]);     //output: 4
+
+          
+
+  - Array always counts from 0 beacuase memeory is always stored in binary form i.e. 0 and 1 . so to not skip 0 value space in memoery we count from 0
+
+  ## Single dimensional array
+
+  - the noraml array is called single dimensional array.
+  
+  ### Example
+
+      let array = [1,2,3,4,5,6,7]
+          console.log(array);    
+
+  
+
+  ## Multi or two dimensional array
+
+  - it has more then one array on an array
+  - it is used for matrix multiplication
+
+  ### Example
+
+        let arry = [[1,2,3],[3,4,6,7]]
+        console.log(arry);
+
+      
+    
+ 
+
+
 
   
