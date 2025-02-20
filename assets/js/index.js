@@ -166,16 +166,64 @@ console.log(objOne);
 
 
 
-function Animal ( name, action ){
-  this.name = name;
-  this.action = action;
+// function Animal ( name, action ){
+//   this.name = name;
+//   this.action = action;
 
-  this.does = function(){
-    return `${this.name} ${this.action} all the time`;
+//   this.does = function(){
+//     return `${this.name} ${this.action} all the time`;
+//   }
+// }
+
+
+// const animalOne = new Animal ( "Dog","Barks");
+// const animalTwo = new Animal ( "horse", "Kicks" );
+// console.log(animalTwo.does());
+
+class Animal{
+  constructor( name , action ){
+    this.name = name
+    this.action = action 
+  }
+
+  dog(){
+    return `${this.name} is ${this.action} at some one `;
+  }
+
+  cat(){
+    return `${this.name} are so ${this.action} `;
   }
 }
 
 
-const animalOne = new Animal ( "Dog","Barks");
-const animalTwo = new Animal ( "horse", "Kicks" );
-console.log(animalTwo.does());
+class WildAnimal extends Animal{
+  constructor(name, action, food ){
+    super(name, action)
+    this.food = food;
+  }
+
+  tiger(){
+    return  `${this.name} is  ${this.action} ${this.food} after hunting an animal`
+  }
+
+} 
+
+const AnimalOne = new Animal( "camal" ,"staring");
+const AnimalTwo = new Animal( "cat" ,"Adorable");
+const WildAnimalOne = new WildAnimal("Tiger", "Eating","Meat")
+console.log(AnimalOne.dog());
+console.log(AnimalTwo.cat());
+console.log(WildAnimalOne.tiger());
+
+
+let array = [1,2,3,4,5,6,7]
+console.log(array)
+console.log(array[3]);     //output: 4
+
+
+let arry = [[1,2,3],[3,4,6,7]]
+console.log(arry[0][1]);
+
+
+
+
