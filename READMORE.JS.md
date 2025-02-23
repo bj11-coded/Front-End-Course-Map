@@ -860,6 +860,84 @@
         let arry = [[1,2,3],[3,4,6,7]]
         console.log(arry);
 
+  ## create a multi dimensional array
+  - we use array method to create an empty array
+  - using new keyword we can declare an array
+
+          let arys = new Array()
+          console.log(arys)
+
+  ### Example
+  - with the combination of index we can create an array with an element
+  - if one of the index is missed it prints empty in console and nothing in the page
+
+        const arys = new Array();
+          arys[0] = new Array();
+          arys[0][0] = 1;
+          arys[0][1] = 2;
+          arys[0][2] = 3;
+          arys[1]= new Array();
+          arys[1][0] = 4
+          arys[1][1] = 5
+          arys[1][2] = 6
+        console.log(arys)
+
+
+# Array Methods
+
+- Array Methods includes manipultions of array elements 
+
+  ## Length
+
+  - it calculates the total length of the array 
+
+          const arry = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
+          console.log(arry.length);
+
+  - to calculate the index we can simply use lenght-1
+
+          const arry = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
+          console.log(arry.length-1);
+
+  ## toString()
+    - it converts the array into string 
+
+            const arryss = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
+            document.querySelector(".arrayMethod").innerHTML = `<h3>${arryss.toString()}</h3>`;
+
+  ## at()
+  - at method returns the element at certain index
+
+          const arryAt = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,45];
+            document.querySelector(".arrayAt").innerHTML = `<h3>${arryAt.at(24)}</h3>`;
+
+  ## join()
+  - join method is used to combine all the elements 
+
+          const arryJoin = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,45];
+            document.querySelector(".arrayJoin").innerHTML = `<h3>${arryJoin.join("-")}</h3>`;
+
+  ## pop()
+  - pop removes the value from the last element
+  - it shows the number of index in an array 
+  - to print the new index after pop just console the value
+
+
+        const arryPop = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,45];
+            document.querySelectorAll(".arrayPop")[0].innerHTML = `<h3> total Element: ${arryPop.pop()}</h3>`;
+            document.querySelectorAll(".arrayPop")[1].innerHTML = `<h3>new Array After pop: ${arryPop}</h3>`;
+
+  ## Push()
+  - push element pushes the new element array at the end 
+  - it shows the number of index in array
+  - to print the new index after the push just print the array after push method
+
+
+        const arryPush= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
+            document.querySelectorAll(".arrayPush")[0].innerHTML = `<h3> total index: ${arryPush.push( "hello" )}</h3>`;
+            document.querySelectorAll('.arrayPush')[1].innerHTML = `<h3> new Array After Push: ${arryPush}</h3>`;
+
+
       
     
  
