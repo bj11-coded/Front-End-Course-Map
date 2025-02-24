@@ -937,11 +937,105 @@
             document.querySelectorAll(".arrayPush")[0].innerHTML = `<h3> total index: ${arryPush.push( "hello" )}</h3>`;
             document.querySelectorAll('.arrayPush')[1].innerHTML = `<h3> new Array After Push: ${arryPush}</h3>`;
 
+  ## shift()
+  - shift deletes the first element from an array
+  - shift method deletes and creates a new array
 
-      
+        
+          const arryShift= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
+            document.querySelectorAll(".arrayShift")[0].innerHTML = `<h3> first element: ${arryShift.shift( )}</h3>`;
+            document.querySelectorAll('.arrayShift')[1].innerHTML = `<h3> new Array After Shift: ${arryShift}</h3>`;
+
+  ## unshift()
+  - unshift method add the element from the first index
+  - it is used to insert element like push
+  - it shows total number of index increased by one
+
+
+          const arryunShift= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
+            document.querySelectorAll(".arrayunShift")[0].innerHTML = `<h3> total no of element: ${arryunShift.unshift( "added" )}</h3>`;
+            document.querySelectorAll('.arrayunShift')[1].innerHTML = `<h3> new Array After unShift: ${arryunShift}</h3>`;
+
+
+  ## slice()
+
+  - slice method is used to seprate the array element from a given start index to the end index
+  - slice ( start, end);
+  - it checks the gap between the start index and end index
+
+    ### Example
+            
+    #### in html
+
+              <h2> Slice </h2>
+              <p class="sliceArray"></p>
+              Start:<span class="start"></span>
+              End:<span class="end"></span>
+              <p id="slice"></p>
     
- 
+    #### in js
+            
+            // initial array
+              const sliced = ["A", "B", "C", "D", "E", "F","G", "H", "I", "J", "k", "L"];
+              // print the array in page
+                document.getElementsByClassName('sliceArray')[0].innerHTML = `Initial Array = [  ${sliced} ]`;
+
+                // function for click event
+              const slic = () =>{
+                // start index value 
+                const start = document.getElementById('start').value;
+                // start index value li print garey xu
+                document.querySelectorAll('.start')[0].innerHTML = `<strong style="background-color:green; color:white"> ${start} </strong>`
+                // end index value
+                const end = document.getElementById('end').value;
+                // end index value li print garey xa
+                document.querySelectorAll('.end')[0].innerHTML = `<strong style="background-color:red; color:white">${end} </strong>`
+                // slice opertion perform vaxa
+                document.getElementById('slice').innerHTML = sliced.slice(start, end);
+              }
+
+  ## Splice()
+
+  - splice cuts the elements according to the length given
+  - it use two value the first index to start and the number to cut down
+  - splice( start, length)
+
+  ### Example:
+
+   #### in html
+
+              <h2> Splice </h2>
+              <p class="spliceArray"></p>
+              Start:<span class="starts"></span>
+              length:<span class="length"></span>
+              <p id="splice"></p>
+              <input type="text" name="" id="starts" placeholder="start number">
+              <input type="text" name="" id="length" placeholder="length number">
+              <button onkeydown="spliced()"> Splice an Array </button>
+    
+    #### in js
+            
+            // initial array
+              const splices = ["A", "B", "C", "D", "E", "F","G", "H", "I", "J", "k", "L"];
+              // print the array in page
+                document.getElementsByClassName('spliceArray')[0].innerHTML = `Initial Array = [  ${splices} ]`;
+
+                // function for click event
+              const spliced = () =>{
+                // start index value 
+                const start = document.getElementById('starts').value;
+                // start index value li print garey xu
+                document.querySelectorAll('.starts')[0].innerHTML = `<strong style="background-color:green; color:white"> ${start} </strong>`
+                // end index value
+                const length = document.getElementById('length').value;
+                // length jati xa tai anuser value li print garey xa
+                document.querySelectorAll('.length')[0].innerHTML = `<strong style="background-color:red; color:white">${length} </strong>`
+                // slice opertion perform vaxa
+                document.getElementById('splice').innerHTML = splices.splice(start, length);
+              }
+                  
+              
 
 
 
-  
+                
