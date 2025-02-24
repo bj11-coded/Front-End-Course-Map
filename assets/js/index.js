@@ -243,6 +243,24 @@ const arryss = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,
         document.querySelector(".arrayMethod").innerHTML = `<h3>${arryss.toString()}</h3>`;
 
 
+
+const arryAt = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
+document.querySelector(".arrayAt").innerHTML = `<h3>${arryAt.at(24)}</h3>`;
+
+
+const arryJoin = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,45];
+            document.querySelector(".arrayJoin").innerHTML = `<h3>${arryJoin.join(`~`)}</h3>`;
+
+const arryPop = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,18,45];
+            document.querySelectorAll(".arrayPop")[0].innerHTML = `<h3> poped Element: ${arryPop.pop()}</h3>`;
+            document.querySelectorAll(".arrayPop")[1].innerHTML = `<h3>new Array After pop: ${arryPop}</h3>`;
+
+const arryPush= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
+            document.querySelectorAll(".arrayPush")[0].innerHTML = `<h3> total index: ${arryPush.push( "hello" )}</h3>`;
+            document.querySelectorAll('.arrayPush')[1].innerHTML = `<h3> new Array After Push: ${arryPush}</h3>`;
+
+
+
 const arryAt = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
 document.querySelector(".arrayAt").innerHTML = `<h3>${arryAt.at(24)}</h3>`;
 
