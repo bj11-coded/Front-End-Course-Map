@@ -864,6 +864,7 @@
   - we use array method to create an empty array
   - using new keyword we can declare an array
 
+
           let arys = new Array()
           console.log(arys)
 
@@ -943,5 +944,178 @@
  
 
 
+          let arys = new Array()
+          console.log(arys)
 
-  
+  ### Example
+  - with the combination of index we can create an array with an element
+  - if one of the index is missed it prints empty in console and nothing in the page
+
+        const arys = new Array();
+          arys[0] = new Array();
+          arys[0][0] = 1;
+          arys[0][1] = 2;
+          arys[0][2] = 3;
+          arys[1]= new Array();
+          arys[1][0] = 4
+          arys[1][1] = 5
+          arys[1][2] = 6
+        console.log(arys)
+
+
+# Array Methods
+
+- Array Methods includes manipultions of array elements 
+
+  ## Length
+
+  - it calculates the total length of the array 
+
+          const arry = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
+          console.log(arry.length);
+
+  - to calculate the index we can simply use lenght-1
+
+          const arry = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
+          console.log(arry.length-1);
+
+  ## toString()
+    - it converts the array into string 
+
+            const arryss = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,,9956,434,45,45];
+            document.querySelector(".arrayMethod").innerHTML = `<h3>${arryss.toString()}</h3>`;
+
+  ## at()
+  - at method returns the element at certain index
+
+          const arryAt = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,45];
+            document.querySelector(".arrayAt").innerHTML = `<h3>${arryAt.at(24)}</h3>`;
+
+  ## join()
+  - join method is used to combine all the elements 
+
+          const arryJoin = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,45];
+            document.querySelector(".arrayJoin").innerHTML = `<h3>${arryJoin.join("-")}</h3>`;
+
+  ## pop()
+  - pop removes the value from the last element
+  - it shows the number of index in an array 
+  - to print the new index after pop just console the value
+
+
+        const arryPop = [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,45];
+            document.querySelectorAll(".arrayPop")[0].innerHTML = `<h3> total Element: ${arryPop.pop()}</h3>`;
+            document.querySelectorAll(".arrayPop")[1].innerHTML = `<h3>new Array After pop: ${arryPop}</h3>`;
+
+  ## Push()
+  - push element pushes the new element array at the end 
+  - it shows the number of index in array
+  - to print the new index after the push just print the array after push method
+
+
+        const arryPush= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
+            document.querySelectorAll(".arrayPush")[0].innerHTML = `<h3> total index: ${arryPush.push( "hello" )}</h3>`;
+            document.querySelectorAll('.arrayPush')[1].innerHTML = `<h3> new Array After Push: ${arryPush}</h3>`;
+
+  ## shift()
+  - shift deletes the first element from an array
+  - shift method deletes and creates a new array
+
+        
+          const arryShift= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
+            document.querySelectorAll(".arrayShift")[0].innerHTML = `<h3> first element: ${arryShift.shift( )}</h3>`;
+            document.querySelectorAll('.arrayShift')[1].innerHTML = `<h3> new Array After Shift: ${arryShift}</h3>`;
+
+  ## unshift()
+  - unshift method add the element from the first index
+  - it is used to insert element like push
+  - it shows total number of index increased by one
+
+
+          const arryunShift= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
+            document.querySelectorAll(".arrayunShift")[0].innerHTML = `<h3> total no of element: ${arryunShift.unshift( "added" )}</h3>`;
+            document.querySelectorAll('.arrayunShift')[1].innerHTML = `<h3> new Array After unShift: ${arryunShift}</h3>`;
+
+
+  ## slice()
+
+  - slice method is used to seprate the array element from a given start index to the end index
+  - slice ( start, end);
+  - it checks the gap between the start index and end index
+
+    ### Example
+            
+    #### in html
+
+              <h2> Slice </h2>
+              <p class="sliceArray"></p>
+              Start:<span class="start"></span>
+              End:<span class="end"></span>
+              <p id="slice"></p>
+    
+    #### in js
+            
+            // initial array
+              const sliced = ["A", "B", "C", "D", "E", "F","G", "H", "I", "J", "k", "L"];
+              // print the array in page
+                document.getElementsByClassName('sliceArray')[0].innerHTML = `Initial Array = [  ${sliced} ]`;
+
+                // function for click event
+              const slic = () =>{
+                // start index value 
+                const start = document.getElementById('start').value;
+                // start index value li print garey xu
+                document.querySelectorAll('.start')[0].innerHTML = `<strong style="background-color:green; color:white"> ${start} </strong>`
+                // end index value
+                const end = document.getElementById('end').value;
+                // end index value li print garey xa
+                document.querySelectorAll('.end')[0].innerHTML = `<strong style="background-color:red; color:white">${end} </strong>`
+                // slice opertion perform vaxa
+                document.getElementById('slice').innerHTML = sliced.slice(start, end);
+              }
+
+  ## Splice()
+
+  - splice cuts the elements according to the length given
+  - it use two value the first index to start and the number to cut down
+  - splice( start, length)
+
+  ### Example:
+
+   #### in html
+
+              <h2> Splice </h2>
+              <p class="spliceArray"></p>
+              Start:<span class="starts"></span>
+              length:<span class="length"></span>
+              <p id="splice"></p>
+              <input type="text" name="" id="starts" placeholder="start number">
+              <input type="text" name="" id="length" placeholder="length number">
+              <button onkeydown="spliced()"> Splice an Array </button>
+    
+    #### in js
+            
+            // initial array
+              const splices = ["A", "B", "C", "D", "E", "F","G", "H", "I", "J", "k", "L"];
+              // print the array in page
+                document.getElementsByClassName('spliceArray')[0].innerHTML = `Initial Array = [  ${splices} ]`;
+
+                // function for click event
+              const spliced = () =>{
+                // start index value 
+                const start = document.getElementById('starts').value;
+                // start index value li print garey xu
+                document.querySelectorAll('.starts')[0].innerHTML = `<strong style="background-color:green; color:white"> ${start} </strong>`
+                // end index value
+                const length = document.getElementById('length').value;
+                // length jati xa tai anuser value li print garey xa
+                document.querySelectorAll('.length')[0].innerHTML = `<strong style="background-color:red; color:white">${length} </strong>`
+                // slice opertion perform vaxa
+                document.getElementById('splice').innerHTML = splices.splice(start, length);
+              }
+                  
+              
+
+
+
+                
