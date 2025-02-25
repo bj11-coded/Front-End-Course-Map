@@ -702,14 +702,15 @@
     - while creating an object inside an object we should use new Object() method
 
     ### Example
-        const objOne = new Object();
-        objOne.name = "butwal"
-        objOne.address = new Object();
-        objOne.address.pernament = "palpa"
-        objOne.address.temprory = "butwal"
-        objOne.ward = 8
-        objOne.lives = true
-        console.log(objOne);
+
+          const objOne = new Object();
+          objOne.name = "butwal"
+          objOne.address = new Object();
+          objOne.address.pernament = "palpa"
+          objOne.address.temprory = "butwal"
+          objOne.ward = 8
+          objOne.lives = true
+          console.log(objOne);
 
 
 ## constructor
@@ -937,13 +938,6 @@
         const arryPush= [3,4,7,45,89,9,4,23,45,6,76,8,9,34,99,56,54,87,9,5,45,34,556,4,7,6,3423,43,345,5,6,7,54,7,8,87,43,9956,434,45,40];
             document.querySelectorAll(".arrayPush")[0].innerHTML = `<h3> total index: ${arryPush.push( "hello" )}</h3>`;
             document.querySelectorAll('.arrayPush')[1].innerHTML = `<h3> new Array After Push: ${arryPush}</h3>`;
-
-
-      
-    
- 
-
-
           let arys = new Array()
           console.log(arys)
 
@@ -1116,6 +1110,118 @@
                   
               
 
+  ## includes()
+  - it checks wether the element is on the array or not 
+  - it searches the value and print in boolean form. if there's a value it prints true else false
+
+  #### Example
+
+            const aryInc = [32,41,92,18,9, 14, 31, 23];
+            console.log(aryInc.includes(9));
+
+  ## indexOf()
+  - indexof checks the index in which  the give value falls.
+    - if it finds the value it prints the index of the value but if it doesnot then it returns negative value
+
+  #### Example
+
+            const aryInc = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+            console.log(aryInc.indexOf(9));
+
+  ## lastIndexOf()
+  - lastIndexOf finds last occuring value of the given array
+  - it is same as indexof
+  - if it finds the value it prints the index of the value but if it doesnot then it returns negative value
+  - the first value is the serching value and the last value is upto where should we search ( value, upto Index )
+
+  #### Example
+
+            const aryLast = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+            console.log(aryLast.lastIndexOf(14, 4));
+
+  ## sort ()
+  - sort is used for shorting an array 
+  - it changes the orginal array
+  - sort Method arranges either in accending order
+  - noramal sorting arrange the number according to the first value 
+  - if the values are  [ 2, 22, 32,222] then it arranges as [2 , 22, 222, 32 ] as it checks the first value of each number.
+
+  #### Example
+
+             const arySort = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+            console.log(arySort.sort());
+
+  - if we have to perform correct accending and decending order then use
+
+              const arySort = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+                console.log(arySort.sort( 
+                  function(a, b){
+                    return a - b;
+                  }
+                ));
+
+  - for the decending order perform b - a
+
+              const arySort = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+                console.log(arySort.sort( 
+                  function(a, b){
+                    return b - a;
+                  }
+                ));
 
 
-                
+  ## reverse ()
+  - reverse sorts an array in decending order according to the index element
+  - if the first index value is in first then it switch to the last element and vice versa
+
+  #### Example
+
+            const aryRev = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+            console.log(aryRev.reverse());
+  
+
+  ## toSorted()
+  - tosort creates a new array without changing the orginal array
+  - it is the safest way of creating a new array
+
+  ### Example:
+
+          const arySorted = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+            console.log(arySorted.toSorted());
+
+  
+  ## toReversed()
+  - toReversed creates a new array without changing the orginal array
+  - it is the safest way of creating a new array
+
+  ### Example:
+
+          const aryReversed = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
+          console.log(aryReversed.toReversed());
+
+
+# Array Itteration 
+- Array iteration is used to iterate every element
+- it works as a loop method
+- every elements are itterated one after another
+
+## 1. forEach( )
+- forEach is an itteration method that iterates the each element from an array as a callback function.
+- it doenot require index to print the output
+- it doesnot create a new Array
+- the function takes 3 arguments:
+
+    * The item value - value prints the elements in an array
+    * The item index - index prints the indexes in an array
+    * The array itself - it prints the whole array upto the number of index.
+
+  #### Syntex
+
+            array.forEach((value, index , array)=>{
+                console.log( value )
+                console.log( index )
+                console.log( array )
+            })
+
+  - Although the arguments are switched as ( index, value , array) the index prints the elements in an array and value prints indexes in an array.
+  - so first argument says the elements and 2nd argument says the index and last one prints whole array regardless the name ( <i> whatever name can be placed </i> )
