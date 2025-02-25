@@ -64,36 +64,33 @@
 
 
 
-#### How to share the project
+# How to share the project
+ - GO to Repo
 
+ - click on setting and go to colaborator
 
- # GO to Repo
+ - now Add peopole with theri email or gitid
 
- # click on setting and go to colaborator
-
- # now Add peopole with theri email or gitid
-
- # send the request
+ - send the request
 
 
 
 
- #### how to download the project
+ # how to download the project
 
- # go to the shared project or your own project repo.
+ - go to the shared project or your own project repo.
 
- # Click on the green button code and copy https link
+ - Click on the green button code and copy https link
 
- # open your preferd folder and open terminal over there
+ - open your preferd folder and open terminal over there
 
- # type command -  git clone httpsLink
+ - type command -  git clone httpsLink
 
- # now enjoy coding.
+ - now enjoy coding.
 
 
 
- ##### how to host your project 
-
+ # how to host your project 
 
  - Go to [Vercel.com](https://vercel.com/)
 
