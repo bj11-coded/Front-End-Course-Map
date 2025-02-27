@@ -1225,3 +1225,148 @@
 
   - Although the arguments are switched as ( index, value , array) the index prints the elements in an array and value prints indexes in an array.
   - so first argument says the elements and 2nd argument says the index and last one prints whole array regardless the name ( <i> whatever name can be placed </i> )
+
+  ## 2. Map( )
+  - Map is used to iterate each and every element in an array  as a callback function.
+  - it uses loop method to iterate each and every element.
+  - it creates a new array without changing the orginal array.
+  - it uses three argument.
+
+    * The item value - value prints the elements in an array
+    * The item index - index prints the indexes in an array
+    * The array itself - it prints the whole array upto the number of index.
+
+
+  #### Syntex
+
+            array.map(( value, index, Array )) =>{
+              console.log(value);
+              console.log(index);
+              console.log(Array);
+            }
+
+
+  ## 3. filter( )
+  - filter is used to filterout the true element of an array 
+  - it sets a condition if the conditon is passed then the element is iterated 
+  - it uses three argument.
+
+    * The item value - value prints the elements in an array
+    * The item index - index prints the indexes in an array
+    * The array itself - it prints the whole array upto the number of index.
+
+  #### Syntex
+
+         const arrayFilter = [43,44,45,47, 48, 49, 50]
+           const aryAfterFilter = arrayFilter.filter(( value, index, Array ) =>{
+                      return value > 45;
+                    })
+
+          console.log(aryAfterFilter);
+
+  ## 4. Reduce ( )
+  - Reduce method is used to reduce the elements to the single value
+  - it works from left-to-right
+  - it mainly uses 2 argument:
+      * initialValue: for the first comming value
+      * totalValue: for the accumulated value
+  
+  #### Syntex:
+
+              const arryReduce = [4,5,6,7,8,9,10,11,12,13,14,15];
+              const totalVal = arryReduce.reduce((initialValue, totalValue)=>{
+                return initialValue * totalValue;
+              })
+              console.log(totalVal);
+  
+  ## 5. reduceRight()
+  - it is same as reduce method but it works from right to left
+
+  #### syntex:
+
+          const arryReduce = [4,5,6,7,8,9,10,11,12,13,14,15];
+              const totalVal = arryReduce.reduceRight((initialValue, totalValue)=>{
+                return initialValue * totalValue;
+              })
+              console.log(totalVal);
+
+  ## 6. Every ( )
+  - Every method says that every element should be satisfied to the condition for the itteration
+  - it uses single arguments
+  
+  #### Syntex:
+
+              const everyArray = [4,5,6,7,8,9,10,11,12,13,14];
+              const satisfied = everyArray.every((value)=>{
+                return value > 8;
+              })
+              console.log(satisfied);
+
+  - it returns false as every element doesnot pass the condition
+
+
+  ## 7. some ( )
+  - some method is used to check whether some value passes or not 
+  - it uses single argument
+
+  #### Syntex:
+
+               const someArray = [4,5,6,7,8,9,10,11,12,13,14];
+              const satisfied = someArray.some((value)=>{
+                return value > 8;
+              })
+              console.log(satisfied);
+
+
+  ## 8. entries ( ) 
+
+  - The entries() method returns an Array Iterator object with key/value pairs:
+  - The entries() method does not change the original array.
+
+  #### Syntex:
+
+              const fruits = ["Banana", "Orange", "Apple", "Mango"];
+              const frut = fruits.entries(); 
+              console.log(frut);  
+
+              for ( let fruty of frut){
+                console.log(fruty)
+              }
+
+              output: [0, "Banana"]
+                      [1, "Orange"]
+                      [2, "Apple"]
+                      [3, "Mango"]
+
+  ## Sprade Operators
+  - The sprade ( ... ) operator expands an iterable (like an array) into more elements
+  - it joins more the one array into one 
+  - it is like a push method 
+
+  #### Syntex:
+
+              const oneArray = [1,2,3,4,5]
+              const twoArray = ["hello","fellow","blow","melo"];
+              const threeArray = [true, false, true, true]
+
+              const combine = [...oneArray, ...twoArray, ...threeArray];
+              console.log(combine);
+
+
+# Date
+
+- Date object is used to define the date in a javascript
+- it takes the computer time zone and prints the date 
+
+#### Syntex:
+
+          const date = new Date();
+          console.log(date);
+
+ ## date:
+ - use getDate() method to print todays date
+
+          const date = new Date()
+          const todaysDate = date.getDate()
+          console.log(todaysDate);
+          

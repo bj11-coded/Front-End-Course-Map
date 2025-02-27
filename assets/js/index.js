@@ -335,3 +335,61 @@ const arySorted = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
 
 const aryReversed = [32,41,92,18,9, 14, 31, 23, 27, 15, 6, 65];
             console.log(aryReversed.toReversed());
+
+const arrayFilter = [43,44,45,47, 48, 49, 50]
+           const aryAfterFilter = arrayFilter.filter(( value, index, Array ) =>{
+                      return value > 45;
+                    })
+
+          console.log(aryAfterFilter);
+
+// const arryReduce = [4,5,6,7,8,9,10,11,12,13,14,15];
+//           const totalVal = arryReduce.reduce((initialValue, totalValue)=>{
+//             return initialValue + totalValue;
+//           })
+//           console.log(totalVal);
+
+const arryReduce = [4,5,6,7,8,9,10,11,12,13,14,15];
+              const totalVal = arryReduce.reduceRight((initialValue, totalValue)=>{
+                return initialValue + totalValue;
+              })
+              console.log(totalVal);
+
+const everyArray = [4,5,6,7,8,9,10,11,12,13,14];
+              const satisfied = everyArray.every((value)=>{
+                return value > 8;
+              })
+              console.log(satisfied);
+
+
+const someArray = [4,5,6,7,8,9,10,11,12,13,14];
+              const satisfies = someArray.some((value)=>{
+                return value > 8;
+              })
+              console.log(satisfies);
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+              const frut = fruits.entries(); 
+              
+              for ( let fruty of frut){
+                console.log(fruty)
+              }
+
+const oneArray = [1,2,3,4,5]
+const twoArray = ["hello","fellow","blow","melo"];
+const threeArray = [true, false, true, true]
+
+              const combine = [...oneArray, ...twoArray, ...threeArray];
+              console.log(combine);
+
+
+//  date starts here
+const date = new Date();
+const todaysDate = date.getDate();
+const currentMonth = date.getMonth();
+const time = date.getTime();
+console.log(time)
+document.getElementsByClassName('getDate')[0].innerHTML = todaysDate;
+document.getElementsByClassName('getDate')[1].innerHTML = currentMonth + 1;
+document.getElementsByClassName('getDate')[2].innerHTML = time;
+console.log(date);
