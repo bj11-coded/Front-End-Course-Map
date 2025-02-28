@@ -1370,3 +1370,223 @@
           const todaysDate = date.getDate()
           console.log(todaysDate);
           
+
+  ## year
+  - use getYear() method to print year
+
+          const date = new Date()
+          const year = date.getYear();
+          document.getElementsByClassName('getDate')[0].innerHTML = year;
+
+  ## Month
+  - use getMonth() method to print current month
+
+          const date = new Date()
+          const month = date.getMonth();
+          document.getElementsByClassName('getDate')[1].innerHTML = month;
+  
+  ## day
+  - use getDay() method to print day
+  - day is calculated starting from 0 use + 1 to display current day
+
+          const date = new Date()
+          const day = date.getDay();
+          document.getElementsByClassName('getDate')[1].innerHTML = day;
+
+  - to represent date in string we use switch case
+
+          const date = new Date()
+          const day = date.getDay();
+            switch(day){
+              case 0:
+                document.getElementsByClassName('getDate')[0].innerHTML = "sunday";
+                break;
+              
+              case 1:
+                document.getElementsByClassName('getDate')[0].innerHTML = "Monday";
+                break;
+
+              case 2:
+                document.getElementsByClassName('getDate')[0].innerHTML = "Tuesday";
+                break;
+              
+              case 3:
+                document.getElementsByClassName('getDate')[0].innerHTML = "Wenesday";
+                break;
+                
+              case 4:
+                document.getElementsByClassName('getDate')[0].innerHTML = "Thrusday";
+                break;
+              
+              case 5:
+                document.getElementsByClassName('getDate')[0].innerHTML = "Friday";
+                break;
+              
+              case 0:
+                document.getElementsByClassName('getDate')[0].innerHTML = "Saturday";
+                break;
+
+              default:
+                document.getElementsByClassName('getDate')[0].innerHTML = "Invalid number";
+
+            }
+
+  ## Hour
+  - use getHour() method to get hour
+
+          const date = new Date()
+          const hour = date.getHour();
+          document.getElementsByClassName('getDate')[1].innerHTML = hour;
+
+  
+  ## Minute
+  - use getMinutes() method for minutes
+
+          const date = new Date()
+          const minute = date.getMinutes();
+          document.getElementsByClassName('getDate')[1].innerHTML = minute;
+
+  ## Seconds
+  - use getSeconds() method for seconds
+
+          const date = new Date()
+          const seconds = date.getSeconds();
+          document.getElementsByClassName('getDate')[1].innerHTML = seconds;
+
+  ## miliSeconds
+  - use getMilliseconds() method for the miliseconds
+
+          const date = new Date()
+          const miliSeconds = date.getMilliseconds();
+          document.getElementsByClassName('getDate')[1].innerHTML = miliSeconds;
+
+  ## UTC Time
+  - to get the universal time coordinates use getUTCTime and forother getUTCName
+
+          const date = new Date()
+          const todaysDate = date.getUTCDate()
+          const year = date.getUTCYear();
+          const month = date.getUTCMonth();
+          const day = date.getUTCDay();
+          const hour = date.getUTCHour();
+          const minute = date.getUTCMinutes();
+          const seconds = date.getUTCSeconds();
+          const miliSeconds = date.getUTCMilliseconds();
+
+  ## SetDate
+  - set date is used to set the date accoring to the will
+
+
+  #### for local:
+          
+          const date = new Date("2000/2/12")
+          const todaysDate = date.setDate("1997/08/08")
+          const year = date.setYear(2000);
+          const month = date.setMonth(8);
+          const day = date.setDay(12);
+          const hour = date.setHour(12);
+          const minute = date.setMinutes(12);
+          const seconds = date.setSeconds(11);
+          const miliSeconds = date.setMilliseconds(123);
+
+  #### for UTC:
+
+          const date = new Date("2000/2/12")
+          const todaysDate = date.setUTCDate("1997/08/08")
+          const year = date.setUTCYear(2000);
+          const month = date.setUTCMonth(12);
+          const day = date.setUTCDay(2);
+          const hour = date.setUTCHour(3);
+          const minute = date.setUTCMinutes(11);
+          const seconds = date.setUTCSeconds(19);
+          const miliSeconds = date.setUTCMilliseconds(222);
+
+
+
+# loop 
+
+- loop is used to simplify the repeated task 
+- loop runs until the condtion is true or satisfied.
+- loop means continous run to some point.
+- loop makes code more concise and efficient.
+- if we have to print somting maybe 5 time then we use loop which is easier
+
+#### Types of loop
+
+  - For Loop
+      - for of 
+      - for in
+  - while loop
+  - Do loop
+
+
+## For loop
+
+  - for loop is one of the process of looping where a value is initialized, a condition is given and a increment or decrement is placed
+
+  #### Syntex:
+
+            for ( initalization; condtion ; increment / decrement ){
+
+              //code here
+
+            }
+
+  #### Example:
+  - let us suppose we have to print value from 1 to 5 at once we use for loop for the convienent output 
+
+          for ( let i = 0; i < 5; i++){
+            console.log(i);
+          }
+
+  - <strong> How loop works?? </strong>
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/loop2.png" height="200" width="auto" alt="loop structure">
+    - in this case:
+        * i is initalize with 0 as inital value is zero  so  the i value while comparing with <b> i < 5 </b> will  be true 
+        * as soon as the value is true it goes to the console.log(i) where the current value of <b> i </b> is printed
+        * after the value is printed it goes to the increment as the value increases by 1
+        * now tha value of i changes to 1 due to the increment and again the cycle continues
+        * at some point the value of i increases then the limit 5 where the conditon will be false. 
+        * At that point loop breaks.
+
+
+  ### Nasted loop 
+  - nested loop means a loop inside another loop 
+  - if the condition is true then only another loop works
+
+  #### syntex:
+
+            for( initalizaiton; condition; increment/decrement ){
+
+              for ( initalization; condition; increment/decrement){
+
+                <!-- code here -->
+
+              }
+            }
+
+
+  #### Example:
+
+  - lets print the multiple table of 5 
+
+            for ( i = 5; i === 5; i++){
+              for( j = 1; j <= 10; i++){
+                console.log(`${i} * ${j}: ${i * j }`)
+              }
+              console.log('/n');
+            }
+
+  - multiple table from 1  to 10
+
+            for ( i = 1; i <= 10; i++){
+              for( j = 1; j <= 10; j++){
+                console.log(`${i} * ${j} = ${i * j }`)
+              }
+              console.log('/n');
+            }
+
+
+
+
+
