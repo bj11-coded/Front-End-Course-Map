@@ -386,10 +386,87 @@ const threeArray = [true, false, true, true]
 //  date starts here
 const date = new Date();
 const todaysDate = date.getDate();
-const currentMonth = date.getMonth();
-const time = date.getTime();
-console.log(time)
 document.getElementsByClassName('getDate')[0].innerHTML = todaysDate;
+
+const currentMonth = date.getMonth();
 document.getElementsByClassName('getDate')[1].innerHTML = currentMonth + 1;
+
+const time = date.getTime();
 document.getElementsByClassName('getDate')[2].innerHTML = time;
+
+const minute = date.getMinutes();
+document.getElementsByClassName('getDate')[3].innerHTML = minute;
+
+const second = date.getSeconds();
+document.getElementsByClassName('getDate')[4].innerHTML =second;
+
+const miliSec = date.getMilliseconds();
+document.getElementsByClassName('getDate')[5].innerHTML = miliSec;
+
+
+const day = date.getDay();
+switch(day){
+  case 0:
+    document.getElementsByClassName('getDate')[6].innerHTML = "sunday";
+    break;
+  
+  case 1:
+    document.getElementsByClassName('getDate')[6].innerHTML = "Monday";
+    break;
+
+  case 2:
+    document.getElementsByClassName('getDate')[6].innerHTML = "Tuesday";
+    break;
+  
+  case 3:
+    document.getElementsByClassName('getDate')[6].innerHTML = "Wenesday";
+    break;
+    
+  case 4:
+    document.getElementsByClassName('getDate')[6].innerHTML = "Thrusday";
+    break;
+  
+  case 5:
+    document.getElementsByClassName('getDate')[6].innerHTML = "Friday";
+    break;
+  
+  case 6:
+    document.getElementsByClassName('getDate')[6].innerHTML = "Saturday";
+    break;
+
+  default:
+    document.getElementsByClassName('getDate')[6].innerHTML = "Invalid number";
+
+}
+
+
 console.log(date);
+
+
+
+// loop here
+
+for ( let i = 1; i <= 5; i++){
+  document.write(i)
+  document.write('<br>')
+}
+
+for(let i = 5; i > 0; i--){
+  document.write(i);
+  document.write('<br>')
+}
+
+for ( i = 5; i === 5; i++){
+  for( j = 1; j <= 10; j++){
+    console.log(`${i} * ${j} = ${i * j }`)
+  }
+  console.log('/n');
+}
+
+
+for ( i = 1; i <= 10; i++){
+  for( j = 1; j <= 10; j++){
+    console.log(`${i} * ${j} = ${i * j }`)
+  }
+  console.log('/n');
+}
