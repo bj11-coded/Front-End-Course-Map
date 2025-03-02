@@ -1586,7 +1586,98 @@
               console.log('/n');
             }
 
+  - pattern print
+    <p>1</p>
+    <p>12</p>
+    <p>123</p>
+    <p>1234</p>
+    <p>12345</p>
 
 
+          for( i = 1; i <=5; i++){
+          for(j=1; j<=i; j++){
+            document.write(j);
+          }
+          document.write('<br>')
+        }
 
 
+    <p>12345</p>
+    <p>1234</p>
+    <p>123</p>
+    <p>12</p>
+    <p>1</p>
+
+        for( i = 5; i >= 1; i--){
+          for(j=1; j <= i; j++){
+            document.write(j);
+          }
+          document.write('<br>')
+        }
+
+  <p>12345</p>
+  <p>12345</p>
+  <p>12345</p>
+  <p>12345</p>
+  <p>12345</p>
+
+
+        for( i = 1; i <= 5; i++){
+          for(j=1; j <= 5; j++){
+            document.write(j);  
+          }
+          document.write('<br>')
+        }
+    
+  <p>*****</p>
+  <p>*****</p>
+  <p>*****</p>
+  <p>*****</p>
+  <p>*****</p>
+
+
+        for( i = 1; i <= 5; i++){
+          for(j=1; j <= 5; j++){
+            document.write("*");  
+          }
+          document.write('<br>')
+        }
+
+
+  <p>*</p>
+  <p>**</p>
+  <p>***</p>
+  <p>****</p>
+  <p>*****</p>
+  <p>*</p>
+  <p>**</p>
+  <p>***</p>
+  <p>****</p>
+  <p>*****</p>
+  <p>******</p>
+  <p>*******</p>
+  <p>*</p>
+  <p>*</p>
+  <p>*</p>
+
+        for( i = 1; i <=5; i++){
+          for(j=1; j<=i; j++){
+            document.write("* &nbsp;");
+          }
+          document.write('<br>')
+        }
+        for( i = 1; i <=7; i++){
+          for(j=1; j<=i; j++){
+            document.write("* &nbsp;");
+          }
+          document.write('<br>')
+        }
+        for(let k = 1; k <=3; k++){
+          document.write('* <br>');
+        }
+
+  
+          
+
+    
+  

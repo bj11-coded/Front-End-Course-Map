@@ -468,5 +468,44 @@ for ( i = 1; i <= 10; i++){
   for( j = 1; j <= 10; j++){
     console.log(`${i} * ${j} = ${i * j }`)
   }
-  console.log('/n');
+  console.log('\n');
+}
+
+
+for( i = 1; i <=5; i++){
+  for(j=1; j<=i; j++){
+    document.write(j);
+  }
+  document.write('<br>')
+}
+
+
+for( i = 5; i >= 1; i--){
+  for(j=1; j <= i; j++){
+    document.write(j);
+  }
+  document.write('<br>')
+}
+
+for( i = 1; i <= 5; i++){
+  for(j=1; j <= 5; j++){
+    document.write('*');  
+  }
+  document.write('<br>')
+}
+
+for( i = 1; i <=5; i++){
+  for(j=1; j<=i; j++){
+    document.write("* &nbsp;");
+  }
+  document.write('<br>')
+}
+for( i = 1; i <=7; i++){
+  for(j=1; j<=i; j++){
+    document.write("* &nbsp;");
+  }
+  document.write('<br>')
+}
+for(let k = 1; k <=3; k++){
+  document.write('* <br>');
 }
