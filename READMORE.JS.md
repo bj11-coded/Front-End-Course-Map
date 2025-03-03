@@ -1628,12 +1628,14 @@
           }
           document.write('<br>')
         }
-    
-  <p>*****</p>
-  <p>*****</p>
-  <p>*****</p>
-  <p>*****</p>
-  <p>*****</p>
+
+````
+  *****
+  *****
+  *****
+  *****
+  *****
+````
 
 
         for( i = 1; i <= 5; i++){
@@ -1643,22 +1645,23 @@
           document.write('<br>')
         }
 
-
-  <p>*</p>
-  <p>**</p>
-  <p>***</p>
-  <p>****</p>
-  <p>*****</p>
-  <p>*</p>
-  <p>**</p>
-  <p>***</p>
-  <p>****</p>
-  <p>*****</p>
-  <p>******</p>
-  <p>*******</p>
-  <p>*</p>
-  <p>*</p>
-  <p>*</p>
+````
+ *
+ * *
+ * * *
+ * * * *
+ * * * * *
+ *
+ * *
+ * * *
+ * * * *
+ * * * * *
+ * * * * * *
+ * * * * * * *
+ *
+ *
+ *
+````
 
         for( i = 1; i <=5; i++){
           for(j=1; j<=i; j++){
@@ -1678,6 +1681,98 @@
 
   
           
+   - Christmas Tree
 
-    
+            for( let i = 1; i < 7; i++){
+              let str= ' &nbsp; '.repeat(7-i);
+              let str2 = '*'.repeat((2*i)-1); 
+              document.write(str + str2 + str + '<br>')
+            }
+
+
+
+            for( let i = 1; i < 7; i++){
+              for(j = 5; j>= i; j--){
+                document.write('&nbsp;')
+              }
+              for(k=1; k < ((2*i)-2); k++ ){
+                document.write('*')
+              }
+              document.write('<br>')
+            }
   
+  - dimond shape
+
+            for( let i = 1; i < 7; i++){
+              for(j = 5; j>= i; j--){
+                document.write('&nbsp;')
+              }
+              for(k=1; k < ((2*i)-2); k++ ){
+                document.write('*')
+              }
+              document.write('<br>')
+            }
+
+            for( let i = 5; i > 1; i--){
+              for(j = 5; j>= i; j--){
+                document.write('&nbsp;')
+              }
+              for(k=1; k < ((2*i)-2); k++ ){
+                document.write('*')
+              }
+              document.write('<br>')
+            }
+
+    - Pattern Print
+
+      1 <br>
+      12<br>
+      123<br>
+      1234<br>
+
+          for(let i= 1; i <=4; i++){
+            for(let j =1; j<=i;j++){
+              document.write(i);
+            }
+            document.write('<br>');
+          }
+
+  - <strong> ***** </strong> <br>
+    <strong> &nbsp;**** </strong> <br>
+    <strong> &nbsp;&nbsp;*** </strong> <br>
+    <strong> &nbsp;&nbsp;&nbsp;** </strong> <br>
+    <strong> &nbsp;&nbsp;&nbsp;&nbsp;* </strong> <br>
+
+            for(i=1; i<=5; i++){
+              for(j=1; j<i; j++){
+                document.write('&nbsp;');
+              }
+              for(k=5; k>=i; k--){
+                document.write('*');
+              }
+              document.write('<br>');
+            }
+
+  - increasing number
+    ```
+    1
+    23
+    456
+    78910
+    ```
+
+    ```
+      let count = 1;
+      for(i=1; i<=4; i++){
+        for(j=1; j<=i; j++){
+            document.write(count);
+            count++;
+        }
+        document.write('<br>');
+      }
+    ```
+
+
+
+                            
+              

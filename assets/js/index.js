@@ -509,3 +509,78 @@ for( i = 1; i <=7; i++){
 for(let k = 1; k <=3; k++){
   document.write('* <br>');
 }
+
+
+for( let i = 5; i > 1; i--){
+  for(j = 5; j>= i; j--){
+    document.write('&nbsp;')
+  }
+  for(k=1; k < ((2*i)-2); k++ ){
+    document.write('*')
+  }
+  document.write('<br>')
+}
+
+for( let i = 1; i < 7; i++){
+  for(j = 5; j>= i; j--){
+    document.write('&nbsp;')
+  }
+  for(k=1; k < ((2*i)-2); k++ ){
+    document.write('*')
+  }
+  document.write('<br>')
+}
+
+for( let i = 5; i > 1; i--){
+  for(j = 5; j>= i; j--){
+    document.write('&nbsp;')
+  }
+  for(k=1; k < ((2*i)-2); k++ ){
+    document.write('*')
+  }
+  document.write('<br>')
+}
+
+// christmas tree
+
+// 1
+// 12
+// 123
+// 1234
+
+for(let i= 1; i <=4; i++){
+  for(let j =1; j<=i;j++){
+    document.write(i);
+  }
+  document.write('<br>');
+}
+
+// *****
+//  ****
+//   ***
+//    **
+//     *
+for(i=1; i<=5; i++){
+  for(j=1; j<i; j++){
+    document.write('&nbsp;');
+  }
+  for(k=5; k>=i; k--){
+    document.write('*');
+  }
+  document.write('<br>');
+}
+
+
+// 1
+// 23
+// 456
+// 78910
+
+let count = 1;
+for(i=1; i<=4; i++){
+  for(j=1; j<=i; j++){
+      document.write(count);
+      count++;
+  }
+  document.write('<br>');
+}
