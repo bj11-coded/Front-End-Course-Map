@@ -1771,8 +1771,46 @@
         document.write('<br>');
       }
     ```
+````
+0101
+1010
+0101
+1010
 
+````
+
+    
+      for(i=1; i<=4; i++){
+        for(j=1; j<=4; j++){
+          if((i+j)%2 == 0){
+            document.write('1');
+          }else{
+            document.write('0');
+          }
+        }
+        document.write('<br>');
+      }
+
+
+````
+*****
+*   *
+*   *
+*   *
+*****
+````
+
+      for(i=1; i<=5; i++){
+        for(j=1; j<=5; j++){
+          if(i == 1 || i == 5 || j == 1 || j == 5){
+            document.write('*');
+          }else{
+            document.write(' &nbsp;');
+          }
+        }
+        document.write('<br>');
+      }
 
 
                             
-              
+
