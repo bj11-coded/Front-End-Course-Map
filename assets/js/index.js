@@ -619,3 +619,67 @@ for(i=1; i<=5; i++){
   }
   document.write('<br>');
 }
+
+//  while loop
+
+let num = 5
+while( num > 0){
+  num--;
+ console.log("The value is ", num);
+ 
+}
+
+// do while loop
+let numb = 1;
+do{
+  numb++;
+  console.log(numb);
+}while( numb <= 5  );
+
+
+const obje= {
+  "name": "hero",
+  "type": "zero"
+}
+ for( let x in obje){
+  console.log(obje[x])
+ }
+
+
+ let iteArray = [2,3,5,8,12,9];
+for( let i of iteArray){
+  console.log(i);
+}
+
+
+//  break and continue
+
+for( i = 1; i <=10; i++){
+  if( i === "5"){
+    // break;
+    continue;
+  }
+  console.log('the printed value is:',i);
+ }
+
+
+ console.log(Math.PI); // 3.14
+ console.log(Math.sqrt(4));  // 2
+ console.log(Math.abs(-4)); // 4
+ console.log(Math.round(4.6)); // 5
+ console.log(Math.floor(4.6)); // 4
+  console.log(Math.ceil(4.6)); // 5
+  console.log(Math.min(4,5,6,7,8,9,10)); // 4
+  console.log(Math.max(4,5,6,7,8,9,10)); // 10
+  console.log(Math.random()); // 0.5
+
+  console.log(Math.trunc(4.4))    // 4
+  console.log(Math.trunc(-4.4))    // -4
+  console.log(Math.trunc(43))    // 43
+  console.log(Math.pow(4,4))
+  console.log(Math.sign(34))
+
+  console.log(Math.sin(90 * Math.PI / 180));
+  console.log(Math.cos(30 * Math.PI / 180));
+  console.log(Math.log(10));    // 0
+  console.log(Math.log2(16))    //4

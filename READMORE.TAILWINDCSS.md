@@ -36,7 +36,8 @@
 
 - Now you can see your terminal working properly 
 - Download an extension on vs Code: <strong> Tailwind inteligence CSS </strong>
-
 - go to html and link the output.css in your html 
 - Now you can use TailwindCss in your html css file
 - incase your terminal is terminated then again run the input and output command to run the tailwind css
+
+

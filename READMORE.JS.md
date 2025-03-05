@@ -1811,6 +1811,237 @@
         document.write('<br>');
       }
 
+## Types of For loop
 
+### for in 
+- for in uses the key value to iterate an object
+- x in this eaxmple is a key for the iteration of object value
+- <strong> Syntex: </strong>
+````
+const obj= {
+  "name": "hero",
+  "type": "zero"
+}
+ for( let x of obj){
+  console.log(obj[x])
+ }
+````
+- The for in loop iterates over a obj object.
+- Each iteration returns a key (x).
+- The key is used to access the value of the key.
+- The value of the key is person[x].
+
+### for of
+- for of is used to iterate itterable elements.
+- it itterates array, string, map, nodelist but not an object.
+- while using object it shows an error as obj is not iterable.
+- <strong> Syntex: </strong>
+
+````
+let iteArray = [2,3,5,8,12,9];
+for( let i of iteArray){
+  console.log(i);
+}
+````
                             
+## While Loop
 
+- while loop is the loop method that checks the condition and prints the value until the condition is true 
+- the value defers accoring to the placement of increment / decrement
+- <strong> Syntex: </strong>
+
+````
+initalization
+
+while( condition ){
+   
+   increment/decrement
+   output
+
+}
+````
+
+#### Example
+````
+ let num = 5
+ while( num > 0){
+  console.log("The value is ", num);
+  num++;
+ }
+````
+
+## do While 
+- The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+- The value defers accoring to the placement of increment / decrement.
+- <strong> Syntex: </strong>
+````
+ intalizaiton
+ do{
+   increment/decrement
+   output
+ }while( condition )
+````
+#### Example
+````
+let numb = 1;
+do{
+  console.log(numb);
+  numb++;
+}while( numb <=5  );
+````
+
+ ## Brake and Continue in loop
+ - <b>Break</b> is used to jump out of the loop after the condition is satisfied.
+ - <b>Continue </b> continues to loop as the condtional value is ignored after the condition is satisfied. if the conditon is not satisfied then every value is printed.
+ - <strong> Syntex: </strong>
+
+ ````
+ for( i = 1; i <=5; i++){
+  if( i === 3){
+    break;
+  }
+  console.log(i);
+ }
+ ````
+ ````
+ for( i = 1; i <=5; i++){
+  if( i === 3){
+    continue;
+  }
+  console.log(i);
+ }
+ ````
+
+
+
+# Math in JavaScript
+- Math is used for mathmatical calculation in js 
+
+### PI
+- it prints the pi vlaue ( 3.141592653589793 ).
+  `````
+  console.log(Math.PI);
+  ````
+
+### SQRT
+- it prints the square root value of any number.
+  ````
+  console.log(Math.sqrt(4));    // 2
+  console.log(Math.sqrt(4.4));   // 2.09 
+  console.log(Math.sqrt(-4));    // NaN  ( it doesnot print negative value )  
+  ````
+
+### ABS
+- it prints the absolute  value of any number. 
+  ````
+  console.log(Math.abs(-4));  // 4
+  ````
+
+### Round
+- it prints the round value of any decimal number depending up decimal number.
+- if the decimal number is lower then 5 is prints normal inputed value else increased value by 1.
+  ````
+  console.log(Math.round(-4.4));   // -4
+  console.log(Math.round( 4.6));   //  5
+  ````
+
+### Ceil
+- it prints the roundup higher value of given decimal number
+
+  ````
+  console.log(Math.ceil(4.4));   //  5
+  console.log(Math.ceil(4.6));  // 5
+  ````
+
+### Floor
+  - it prints the rounddown to lower value of given decimal number
+
+    ````
+    console.log(Math.floor(4.4));   //  4
+    console.log(Math.floor(4.6));  // 4
+    ````
+
+###  Max 
+ - it prints the maximum value from bunch of number 
+
+    ````
+    console.log(Math.max(23,44,51,22,77))   // 77
+    ````
+
+###  Min 
+ - it prints the minimum value from bunch of number 
+
+    ````
+    console.log(Math.min(23,44,51,22,77))   // 22
+    ````
+
+### Random 
+  - Ramdom generates random number in each refresh from 0 to 1
+
+  ````
+  console.log(Math.random());
+  ````
+
+### Trunc 
+  - Trunc returns the integar value from any decimal number.
+
+  ````
+  console.log(Math.trunc(4.4))    // 4
+  console.log(Math.trunc(-4.4))    // -4
+  console.log(Math.trunc(43))    // 43
+  ````
+
+### Pow 
+  -  Pow returns the power value of any number given in x and  y where x is targeted number and y is the multiple.
+
+  ````
+  console.log(Math.pow(4,4))    // 256
+  ````
+
+### Sign
+  - it returns the type of integer with 1 if the value is negative then it returns -1 and if the value is postitive the it return 1
+
+  ````
+  console.log(Math.sign(-4))     // -1
+  console.log(Math.sign(343))    // 1
+  ````
+
+### Sin
+  - Math.sin(x) returns the sine (a value between -1 and 1) of the angle x (given in radians).
+
+  - If you want to use degrees instead of radians, you have to convert degrees to radians:
+
+  - Angle in radians = Angle in degrees x PI / 180.
+
+  ````
+  console.log(Math.sin(90 * Math.PI / 180));   // 1
+  ```` 
+
+
+### Cos
+  - Math.cos(x) returns the cosin (a value between -1 and 1) of the angle x (given in radians).
+
+  - If you want to use degrees instead of radians, you have to convert degrees to radians:
+
+  - Angle in radians = Angle in degrees x PI / 180.
+
+  ````
+  console.log(Math.cos(90 * Math.PI / 180));   // 1
+  ```` 
+
+
+### Log
+
+ - Math.log(x) returns the natural logarithm of x.
+
+ - The natural logarithm returns the time needed to reach a certain level of growth:
+
+  	````
+    console.log(Math.log(1));    // 0
+    ````
+
+  - Math.log2(value) is used to find the log value of given number which has to be multiplied by 2 for what number to get that value
+
+    ````
+    console.log(Math.log2(16))    //4
+    ````
