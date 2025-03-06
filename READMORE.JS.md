@@ -2045,3 +2045,203 @@ do{
     ````
     console.log(Math.log2(16))    //4
     ````
+
+
+# String Method 
+
+  - String method is used to manipulate the string according to the will 
+
+  ### length
+  - length helps to find the number of alphabets in a sentence.
+  - space is also counted as an alphabets
+  
+  #### Example:
+    
+    let strings = "i love Javascript"
+    console.log(strings.length)
+    
+
+  ### includes:
+  - includes checks whether the alphabet or a word false in the senctence or not
+  - it is case sensetive means the letter should be exect same.
+
+  #### Example:
+    
+    let strings = "i love Javascript"
+    console.log(strings.includes("java"));   // false as j is Capital in strings
+
+
+
+  ### at:
+  - it helps to find the string in the given index
+  - it prints the single letter
+  - it is based on the ES6 2015 model
+
+  #### Example:
+    
+      let strings = "i love Javascript"
+      console.log(strings.at(5));    // e
+    
+
+  ### charAt:
+  - The charAt() method returns the character at a specified index (position) in a string:
+
+  #### Example:
+    
+      let strings = "i love Javascript"
+      console.log(strings.charAt(5));    // e
+    
+
+  ### charCodeAt:
+  - it helps to find Asci code of any character 
+  - the index is given in it and prints the decimal code according to the character
+  - The method returns a UTF-16 code (an integer between 0 and 65535).
+
+  #### Example:
+  
+      let strings = "i love Javascript"
+      console.log(strings.at(5));     // 101
+    
+  ### string access [ ]
+  - it access the string accroding to the index
+
+  #### Example:
+    
+      let strings = "i love Javascript"
+      let newVar = strings[4]
+      console.log(newVar) 
+
+
+  ### slice 
+  - slice() extracts a part of a string and returns the extracted part in a new string.
+  - the method takes 2 parameters: start position, and end position (end not included).
+  - the start paramter should be less then end parameter and vice versa for neagative marking 
+
+  #### Example:
+    	
+      let strings = "i love Javascript"
+      console.log(strings.slice(2,7))   // love 
+      
+  - if the values are in negative number then it prints from last 
+      
+      let strings = "i love Javascript"
+      console.log(strings.slice(-7,-2))     //ascri
+
+  
+  ### substring 
+  - it is  similar to the slice 
+  - we can give the value in any order i.e the value at the start can be greater then end
+
+  #### Example:
+    
+    let strings = "i love Javascript"
+    console.log(strings.substring(8,4));   // ve j
+    
+
+  ### toUpperCase():
+  - it converts the strings to the uppercase 
+
+  #### Example:
+    
+     let strings = "i love Javascript"
+     console.log(strings.toUpperCase()); 
+    
+  
+
+  ### toLowerCase():
+  - it converts the strings to the lowerCase 
+
+  #### Example:
+    
+     let strings = "i love Javascript"
+    console.log(strings.toLowerCase()); 
+    
+
+  ### padStart()
+  - it pad a string to the start ( <i> add the string at start </i>)
+  - it pads a string with another string (multiple times) until it reaches a given length.
+
+  #### Example:
+    
+    let strings = "i love Javascript"
+    console.log(strings.padStart(18,"*"));
+    
+
+  
+  ### padEnd()
+  - it pad a string to the end ( <i> add the string at end  </i>)
+  - it pads a string with another string (multiple times) until it reaches a given length.
+
+  #### Example:
+    
+    let strings = "i love Javascript"
+    console.log(strings.padEnd(18,"*"));
+  
+
+  ### Trim ()
+  - trim cuts the empty space from the string both in start and end
+  - <strong> trimStart() </strong> cuts the empty space from start
+  - <strong> trimEnd() </strong> cuts the empty space from end
+
+  #### Example:
+    
+    let strings = "    i love javascript    "
+    console.log(strings);
+    console.log(strings.trim())    
+    console.log(strings.trimStart(), "space check")
+    console.log(strings.trimEnd() ,"space check")
+    
+
+  ### Repeat:
+  - it repeats the string to the given number time 
+
+  #### Example
+
+       let strings = "i love Javascript"
+       console.log(strings.repeat(3));
+
+
+  ### Replace:
+  - Replace replaces specified value with another value in a string
+  - it uses two parameters as first value and 2nd replaced value
+  - it is case sensative
+  
+  #### Example:
+
+       let strings = "i love Javascript"
+       console.log(strings.replace("love","hate"));
+
+  ### split:
+  - Split converts a string into an array 
+  - if somting is defined in the split method then it converts accordingly
+
+  #### Example:
+
+       let strings = "i love Javascript"
+       console.log(strings.split(""));
+       console.log(strings.split(" "));
+       console.log(strings.split(","))
+
+  ### concat:
+  - concat combins two or more strings into one
+
+  #### Example:
+
+        let str1 = "hello";
+        let str2 = "world";
+        let str3 = "universe";
+        let newStr = str1.concat(" ", str2 ," ",str3);
+        console.log(newStr)
+
+
+  ### Search:
+  - search method searchs the string in the sentence
+
+  #### Example:
+
+        let str ="hello world"
+        console.log(str.search("wo")) 
+
+
+        
+

@@ -683,3 +683,37 @@ for( i = 1; i <=10; i++){
   console.log(Math.cos(30 * Math.PI / 180));
   console.log(Math.log(10));    // 0
   console.log(Math.log2(16))    //4
+
+
+
+  // string method
+
+  let strings = "i lov,e Javascript"
+    console.log(strings.length);    // 17
+    console.log(strings.includes("Java"));   // true
+    console.log(strings.at(5));     // e
+    console.log(strings.charAt(5));    // e
+    console.log(strings.charCodeAt(2));    // 108
+    let newVar = strings[4]       // v
+    console.log(newVar)  
+    console.log(strings.slice(2,7));   // love
+    console.log(strings.slice(-7,-2))  // cript
+    console.log(strings.substring(8,4));  // love
+    console.log(strings.toUpperCase());  // I LOVE JAVASCRIPT
+    console.log(strings.toLowerCase());   // i love javascript
+    console.log(strings.padStart(19,"*"));  // **i love Javascript
+    console.log(strings.padEnd(18,"*"));    // i love Javascript*
+    let str = "    i love javascript    "
+    console.log(str.trim());    // i love javascript
+    console.log(str.trimStart(), "3");    // i love javascript
+    console.log(str.trimEnd(), "3");    // i love javascript
+    console.log(strings.repeat(3));  // i love Javascripti love Javascripti love Javascript
+    console.log(strings.replace("love","hate"));
+    console.log(strings.split(""));
+
+    let str1 = "hello";
+    let str2 = "world";
+    let str3 = "universe";
+    let newStr = str1.concat(" ", str2 ," ",str3);
+    console.log(newStr)
+    console.log(str1.search("lo")) 
