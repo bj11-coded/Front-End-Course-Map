@@ -717,3 +717,20 @@ for( i = 1; i <=10; i++){
     let newStr = str1.concat(" ", str2 ," ",str3);
     console.log(newStr)
     console.log(str1.search("lo")) 
+
+
+let stri = "Ram Bahadur Thapa";
+// document.getElementById('letter').innerHTML = stri.charAt(0);
+document.getElementById('letter').innerHTML = stri.split(" ")[0].charAt(0) + stri.split(" ")[1].charAt(0);
+
+const num1 =[4,2,12,9,17,5,8,3];
+// largest number
+console.log(Math.max(...num1));
+
+function abc (){
+  console.log(abc.xyz);
+}
+abc();     // undefined                  
+abc.xyz = 123;
+abc.xyz = 456;
+abc();     // 456
