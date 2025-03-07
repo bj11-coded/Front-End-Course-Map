@@ -734,3 +734,4 @@ abc();     // undefined
 abc.xyz = 123;
 abc.xyz = 456;
 abc();     // 456
+
