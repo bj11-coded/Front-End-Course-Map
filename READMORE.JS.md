@@ -2243,5 +2243,194 @@ do{
         console.log(str.search("wo")) 
 
 
-        
+# setTimeout & setInterval 
+
+- settimeout is used to print the output after a while or after certain time 
+- <strong> Syntex </strong>
+
+        console.log("Starting...");
+        setTimeout(()=>{
+          console.log("this is printed after certain delay!");
+        }, delay)
+        console.log("Ending...");
+
+- setInterval is used to print the output after certain interval and it keep printing without any stopage.
+- <strong> Syntex </strong>
+
+        console.log("Starting...");
+        setInterval(()=>{
+          console.log("this is printed after certain delay!");
+        }, delay)
+        console.log("Ending...");
+  
+  - here delay is compared in mili second as 1000ms = 1 sec
+
+  #### Example:
+
+    #### in HTML
+
+        <div>
+            <div id="time"><strong>00:00:00</strong></div>
+        </div>
+            <button onclick="clearInterval(time)"> Stop Watch</button>
+            <button onclick="location.reload()"> Refresh </button>
+
+    #### in JS
+
+        const time = setInterval(() => {
+            let date = new Date();
+            let time = `${date.getHours()}: ${date.getMinutes()}: ${date.getSeconds()}`;
+            document.getElementById('time').innerHTML = `<strong> ${time} </strong>`;
+        }, 1000);
+
+  - here clearInterval is used to stop the interval 
+  - location.reload() is used to refresh the browser
+
+
+
+## Error handaling
+
+- Error handaling is used to find the error that occur during the programming 
+- Error can be defined in 3 blocks 
+
+## Try
+- Try is used to catch the success 
+- <strong> Syntex </strong>
+
+        try{
+          // code here
+        }
+
+## Catch 
+- catch catches all the error that occurs duing the program 
+- <strong> Syntex </strong>
+
+        catch(error){
+          console.log(error);
+        }
+
+## finally 
+- Finally is used to excute whatever the result is 
+- <strong> Syntex </strong>
+
+        finally{
+          // code here
+        }
+
+
+#### Example 1:
+
+      let y = 2;
+      let x = 1;
+      try{
+        console.log("success",x + y);
+        throw "the value is not found "
+      }
+      catch(error){
+        console.log("Error IS:", error);
+      }
+      finally{
+        console.log('i am executed whatever the result is !!! ')
+      }
+
+
+## Throw 
+- throw is used to generate the custom error
+- it generates the error in the success method
+- <strong> Syntex </strong>
+
+        try{
+          throw 'this is custom error'
+        }
+
+#### Example 2:
+
+##### in HTMl
+
+    <div>
+        <input type="text" id="newValu">
+        <button onclick="validation()"> Check Value </button>
+        <span id="errorMessage" style="color: red;"></span>
+    </div>
+
+##### in JS 
+
+      function validation (){
+        let message = document.getElementById('errorMessage');
+        message.innerHTML = " ";
+        let newValue = document.getElementById('newValu').value;
+        console.log(newValue)
+
+        try{
+          if(newValue.trim() === ""){
+            throw "the value is empty";
+          }
+          if(newValue <= 5 ){
+            throw "Input greater value than 5";
+          }
+          if(newValue >= 20 ){
+            throw "Input less value than 20";
+          }
+          if(isNaN(newValue)){
+            throw "Input a number value";
+          }
+          message.innerHTML = newValue;
+        }
+        catch(error){
+          message.innerHTML = error;
+        }
+      }
+
+
+## Promise
+- A Promise is an Object that links Producing code and Consuming code
+- Producing code is that can take some time 
+- Consuming code is code that must wait for the result
+- A promise is either fulfilled or rejected or pending 
+- <strong> Example </strong>
+
+      let funcPromise = new Promise((resolve, reject) =>{
+        return resolve('this is resloved');
+       // return reject ("this is rejected ");
+      })
+
+      funPromise.then(()=>{
+        console.log(" success ");
+      })
+      .catch((error)=>{
+        console.log('Error:', error)
+      })
+
+
+- if resolve or reject is not defined it goes on pending as no result is seen 
+- <strong> Example </strong>
+
+      let funcPromise = new Promise((resolve, reject) =>{
+        return resolve;
+        // return reject;
+      })
+
+      funPromise.then(()=>{
+        console.log(" success ");
+      })
+      .catch((error)=>{
+        console.log('Error:', error)
+      })
+
+- A JavaScript Promise object can be:
+  - Pending
+  - Fulfilled
+  - Rejected
+
+- The Promise object supports two properties: state and result.
+
+- While a Promise object is "pending" (working), the result is undefined.
+
+- When a Promise object is "fulfilled", the result is a value.
+
+- When a Promise object is "rejected", the result is an error object.
+
+
+
+
 

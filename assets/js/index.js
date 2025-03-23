@@ -735,3 +735,78 @@ abc.xyz = 123;
 abc.xyz = 456;
 abc();     // 456
 
+console.log("Starting...");
+setTimeout(()=>{
+  console.log("this is printed after certain delay!");
+}, delay)
+console.log("Ending...");
+
+
+console.log("Starting...");
+setInterval(()=>{
+  console.log("this is printed after certain delay!");
+}, delay)
+console.log("Ending...");
+
+
+
+const times = setInterval(() => {
+  let date = new Date();
+  let time = `${date.getHours()}: ${date.getMinutes()}: ${date.getSeconds()}`;
+  document.getElementById('time').innerHTML = `<strong> ${time} </strong>`;
+}, 1000);
+
+
+let y = 2;
+      let x = 1;
+      try{
+        console.log("success",x + y);
+        throw "the value is not found "
+      }
+      catch(error){
+        console.log("Error IS:", error);
+      }
+      finally{
+        console.log('i am executed whatever the result is !!! ')
+      }
+
+function validation (){
+        let message = document.getElementById('errorMessage');
+        message.innerHTML = " ";
+        let newValue = document.getElementById('newValu').value;
+        console.log(newValue)
+
+        
+        try{
+          if(newValue.trim() === ""){
+            throw "the value is empty";
+          }
+          if(newValue <= 5 ){
+            throw "Input greater value than 5";
+          }
+          if(newValue >= 20 ){
+            throw "Input less value than 20";
+          }
+          if(isNaN(newValue)){
+            throw "Input a number value";
+          }
+          message.innerHTML = newValue;
+        }
+        catch(error){
+          message.innerHTML = error;
+        }
+      }
+
+
+
+ let funcPromise = new Promise((resolve, reject) =>{
+        return resolve('this is resloved');
+       // return reject ("this is rejected ");
+})
+
+      funPromise.then(()=>{
+        console.log(" success ");
+      })
+      .catch((error)=>{
+        console.log('Error:', error)
+      })

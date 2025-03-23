@@ -131,6 +131,19 @@
         <span id="letter"></span>
      </div>
 
+
+     <div>
+        <div id="times"><strong>00:00:00</strong></div>
+    </div>
+    <button onclick="clearInterval(time)"> Stop Watch</button>
+    <button onclick="location.reload()"> Refresh </button>
+
+    <div>
+        <input type="text" id="newValu">
+        <button onclick="validation()"> Check Value </button>
+        <span id="errorMessage" style="color: red;"></span>
+    </div>
+
 <!-- internal Script -->
     <script>
         console.log("hello everyone")
