@@ -2434,3 +2434,67 @@ do{
 
 
 
+# Async & Await
+
+- Async and Await makes promieses easier to handle 
+- Async is not completed with await 
+- While using async await it always return a promise 
+- Async is used as to delear the function
+- The await keyword can only be used inside an async function.
+- The await keyword makes the function pause the execution and wait for a resolved promise before it continues
+- <strong> Syntex </strong>
+
+      async function fun(){
+        return "one";        // a promise is returned
+      }
+      console.log(fun());
+
+      async function funs(){
+        return Promise.reject("hello");
+      }
+      console.log(funs())
+
+      
+      // using async await
+      async function funs(){
+        let rejection =  Promise.reject("hello");
+        await rejection
+      }
+      funs().then(()=>{
+        console.log('success')
+      })
+      .catch((err)=>{
+        console.log("Error:",err);
+      })
+
+
+      // using try catch 
+      async function funss(){
+        try{
+          let rejection = Promise.reject("Not hello");
+          await rejection
+        }
+        catch(err){
+          console.log("Error", err);
+        }
+      }
+      console.log(funss());
+
+##### Example:
+
+
+      async function fanta() {
+          let fantaCola = new Promise((resolve, reject) => {
+            setInterval(() => {
+              return resolve();
+            }, 4000);
+          });
+          await fantaCola
+        }
+
+        fanta().then(()=>{
+          console.log('i Love fanta');
+        })
+        .catch((err)=>{
+          console.log('Error',err);
+        })
