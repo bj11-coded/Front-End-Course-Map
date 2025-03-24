@@ -2498,3 +2498,27 @@ do{
         .catch((err)=>{
           console.log('Error',err);
         })
+
+
+
+# API
+- ApI is known as Application Program Interface
+- APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. 
+- API let us Perform CRUD Operation ( Create Read Update Delete )
+
+##### Example:
+
+    async function fetchApi (){
+      const url = "https://jsonplaceholder.typicode.com/posts"
+      try{
+        const response = await fetch(url);
+        if(!response.ok){
+          throw new Error ( `${response.status}`)
+        }
+        const json = await response.json();
+        // console.log(json);
+        document.getElementById('json').innerHTML = JSON.stringify(json)
+      }catch(error){
+        console.log(error.message);
+      }
+    }
