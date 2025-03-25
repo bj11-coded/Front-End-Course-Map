@@ -2522,3 +2522,12 @@ do{
         console.log(error.message);
       }
     }
+
+
+# DOM 
+
+- DOM stands for Document Object Model 
+<img src="https://www.w3schools.com/js/pic_htmltree.gif">
+- DOM is used to maipulate or change the frontend or bring changes in webpages.
+- it is used to create dynamic HTML
+

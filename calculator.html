@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./assets/css/calculator.css" />
+  </head>
+  <body>
+    <section class="calculator">
+      <section class="cal-body">
+        <h2>Calculator</h2>
+
+        <div class="result">0</div>
+
+        <input type="number" id="num1" placeholder="First Value" />
+
+        <input type="number" id="num2" placeholder="second Value" />
+
+        <button onkeypress="results()">=</button>
+        <button onclick="location.reload()"> Clear </button>
+      </section>
+    </section>
+
+    <!-- script -->
+    <script src="./assets/js/calulator.js"></script>
+  </body>
+</html>
