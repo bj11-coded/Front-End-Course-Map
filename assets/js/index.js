@@ -972,3 +972,24 @@ async function fetchApi (){
     console.log(error.message);
   }
 }
+
+
+// DOM Model
+
+const image = document.getElementsByClassName('image')[0]
+
+image.src = "https://www.w3schools.com/js/pic_htmltree.gif" 
+
+const divison = document.getElementsByName('divi')[0]
+divison.style.backgroundColor = "red";
+divison.style.color = "#fff";
+divison.style.padding = "20px 40px";
+divison.style.fontSize = "40px"
+
+const newPara = document.createElement("p")
+const texts = document.createTextNode("this is new Paragraph added from DOM ")
+newPara.appendChild(texts);
+divison.appendChild( newPara);
+
+
+
