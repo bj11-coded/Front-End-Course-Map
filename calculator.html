@@ -11,14 +11,31 @@
       <section class="cal-body">
         <h2>Calculator</h2>
 
-        <div class="result">0</div>
+      <form name="calculator" onsubmit="return false">
+        <input type="text" name="result" id="result" readonly />
 
-        <input type="number" id="num1" placeholder="First Value" />
+        <input type="button" name="one" value="1"  onclick="calculator.result.value += '1' " />
+        <input type="button" name="two" value="2" onclick="calculator.result.value += '2' "/>
+        <input type="button" name="three" value="3" onclick="calculator.result.value += '3' " />
+        <input type="button" name="four" value="4" onclick="calculator.result.value += '4' "/>
+        <input type="button" name="five" value="5" onclick="calculator.result.value += '5' "/>
+        <input type="button" name="six" value="6" onclick="calculator.result.value += '6' "/>
+        <input type="button" name="seven" value="7" onclick="calculator.result.value += '7' "/>
+        <input type="button" name="eight" value="8" onclick="calculator.result.value += '8' "/>
+        <input type="button" name="nine" value="9" onclick="calculator.result.value += '9' "/>
+        <input type="button" name="zero" value="0" onclick="calculator.result.value += '0' "/>
+        <input type="button" name="point" value="." onclick="calculator.result.value += '.' "/>
+        <input type="button" name="percent" value="%" onclick="calculator.result.value += '%' "/>
 
-        <input type="number" id="num2" placeholder="second Value" />
+        <input type="button" name="plus" value="+" onclick="calculator.result.value += '+' "/>
+        <input type="button" name="minus" value="-" onclick="calculator.result.value += '-' "/>
+        <input type="button" name="divide" value="/" onclick="calculator.result.value += '/' "/>
+        <input type="button" name="multiply" value="*" onclick="calculator.result.value += '*' " />
 
-        <button onkeypress="results()">=</button>
-        <button onclick="location.reload()"> Clear </button>
+        <button onclick="ErrorHandling()">=</button>
+        <button onclick="calculator.result.value = ''">Clear</button>
+
+      </form>
       </section>
     </section>
 
