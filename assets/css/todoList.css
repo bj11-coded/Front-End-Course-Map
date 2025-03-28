@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.todo-body{
+    max-width: 600px;
+    min-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 10px;
+    box-shadow: 1px 1px 20px 1px #cccc;
+}
+
+.todo-body h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: lightseagreen;
+}
+
+.todo-body form {
+    text-align: center;
+}
+
+.todo-body form input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.todo-body form button{
+    width: 49%;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.addTask{
+    background-color: darkcyan;
+}
+
+.removeTask{
+    background-color: darkred;
+}
+
+
+ul{
+    padding: 15px ;
+    margin: 15px 0;
+    list-style: none;
+}
+
+ul li{
+    padding: 10px;
+    margin: 5px;
+    background-color: #f5f5f5;
+    color: lightseagreen;
+}

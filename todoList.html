@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- link -->
+    <link rel="stylesheet" href="./assets/css/todoList.css">
+</head>
+<body>
+
+    <section class="todoList">
+        <section class="todo-body">
+            <h2> TO-DO LIST </h2>
+
+            <form action="" name="todoList" onsubmit="return flase">
+                <input type="text" name="task" id="task" placeholder="Enter your task here" />
+                <button class="addTask">Add Task</button>
+                <button class="removeTask"> Clear Task</button>
+            </form>
+            
+            <ul id="taskList">
+                <li> Task One </li>
+                <li> Task Two </li>
+            </ul>
+
+        </section>
+    </section>
+
+    <!-- script -->
+    <script src="./assets/js/todoList.js"></script>
+</body>
+</html>

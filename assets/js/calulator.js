@@ -3,7 +3,6 @@ function ErrorHandling () {
     const errors = document.calculator.result.value;
     if(/[\+\-\*\/],{2,}/.test(errors)){
       throw new Error ('Invalid Inupt');
-      
     }
     if(errors.trim() === ''){
       throw new Error ('Empty Input');
