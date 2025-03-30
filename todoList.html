@@ -13,21 +13,24 @@
         <section class="todo-body">
             <h2> TO-DO LIST </h2>
 
-            <form action="" name="todoList" onsubmit="return flase">
+            <form name="todoList" onsubmit="return false">
                 <input type="text" name="task" id="task" placeholder="Enter your task here" />
                 <button class="addTask">Add Task</button>
-                <button class="removeTask"> Clear Task</button>
+                <button class="removeTask" onclick="removeTask()"> Clear Task</button>
             </form>
             
             <ul id="taskList">
-                <li> Task One </li>
-                <li> Task Two </li>
+                No task added Yet.
             </ul>
 
         </section>
     </section>
 
+
+
     <!-- script -->
     <script src="./assets/js/todoList.js"></script>
+    <!-- sweet alert for the notificaiton -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
