@@ -1,22 +1,34 @@
-function ErrorHandling () {
-  try{
-    const errors = document.calculator.result.value;
-    if(/[\+\-\*\/],{2,}/.test(errors)){
-      throw new Error ('Invalid Inupt');
-    }
-    if(errors.trim() === ''){
-      throw new Error ('Empty Input');
-    }
-    if ( errors >= 20){
-      throw new Error ('Input is too large');
-    }
-    if (errors === 'Infinity'){
-      throw new Error ('Division by zero is not allowed');
-    }
-    const resu = eval(errors);
-    document.calculator.result.value = resu;
-  }catch(err){
-    err.message;
-    document.calculator.result.value = err;
+
+const firstValue = parseFloat(document.getElementById("one").value);
+const SecondValue = parseFloat(document.getElementById("two").value);
+const thirdValue = parseFloat(document.getElementById("three").value);
+const fourthValue = parseFloat(document.getElementById("four").value);
+const fifthValue = parseFloat(document.getElementById("five").value);
+const SixthValue = parseFloat(document.getElementById("six").value);
+const SeventhValue = parseFloat(document.getElementById("seven").value);
+const EighthValue = parseFloat(document.getElementById("eight").value);
+const ninthValue = parseFloat(document.getElementById("nine").value);
+const tenthValue = parseFloat(document.getElementById("ten").value);
+const zero = parseFloat(document.getElementById("zero").value);
+
+const result = document.getElementById("result").value;
+
+
+// sign
+const plus = document.getElementById('plus').value
+const minus = document.getElementById('minus').value
+const divide = document.getElementById('divide').value
+const Multiply = document.getElementById('multiply').value
+
+function results() {
+  try {
+    // if(plus == "+"){
+    //   return value +=  
+    // }
+   
+
+    document.getElementsByClassName("result")[0].innerHTML = sum;
+  } catch (err) {
+    console.log("Error", err);
   }
 }
