@@ -2531,3 +2531,56 @@ do{
 - DOM is used to maipulate or change the frontend or bring changes in webpages.
 - it is used to create dynamic HTML
 
+
+# DOM element
+- dom element is used to handle the dom request eith from the name, class or, id 
+
+- There are some elements such as:
+
+### byId
+- byId taks the id to input the value to the page
+- byId gives single value which means the only one data by one id 
+- <strong> Example: </strong>
+
+      const newId = document.getElementById('newId');
+      newId.value;     // takes value from the newId
+      newId.innerHTML = " ";   // any thing that is provided in innerHTML will be randered in the named Id value
+
+### byClassName
+- byClassName takes the class name defined
+- As the class Name are used mulitple time it provides multiple data in an array to access single data index is used as [i].
+- <strong> Example </strong>
+
+      const newClass = document.getElementByClassName('newClass')[0];
+      newClass.value;
+      newClass.innerHTML = " ";
+
+
+### byTagName
+- byTagName takes the tag name such as < a>, < img> to populate data in the document
+- as the tag of same type are multiple which takes multiple data which can only be acessed by index 
+- <strong> Example </strong>
+
+      const newTag = document.getElementByTagName('newTag')[0];
+      newTag.value;
+      newTag.innerHTML = " ";
+
+### byName
+- byName takes the name attribute written within the element and renders the innerHTML content in the document page
+- byName has mulitple values as it is used multiple time 
+<strong> Example </strong>
+
+        const newName = document.getElementByName('newName')[0]
+        newName.value;
+        newName.innerHTML = " ";
+
+
+
+
+
+- some of the project are done here 
+- Calculator
+- Analog Clock
+- to-do list 
+
+
