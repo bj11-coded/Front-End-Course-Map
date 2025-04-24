@@ -357,3 +357,117 @@ ul li::marker{
     font-size: 40px;
    }
 }
+
+
+
+.scroll{
+  background-color: beige;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.scroll .blocks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.scroll .blocks .block{
+  border: 2px solid black;
+  animation: scrolling linear;
+  animation-timeline: view();
+  animation-range: 0% entry 30% cover;
+}
+
+@keyframes scrolling {
+  from{
+      opacity: 0;
+      /* scale: 0.5; */
+      /* clip-path: inset(0% 0% 0% 0%); */
+      transform: scale(.5,.5);
+      /* transform:rotate(0deg) */
+      /* transform: translateX(-100px); */
+  }
+  to{
+      opacity: 1;
+      /* scale: 1; */
+      transform: scale(1,1);
+      /* clip-path: inset(0 0 0 0); */
+      /* transform: rotate(360deg); */
+      /* transform:  translateX(100px); */
+  }
+}
+ 
+.scroll .blocks .blockOne{
+  width: 500px;
+  height: 100px;
+  background-color: lightcoral;
+}
+.scroll .blocks .blockTwo{
+  width: 400px;
+  height: 100px;
+  background-color: lightblue;
+}
+.scroll .blocks .blockThree{
+  width: 600px;
+  height: 300px;
+  background-color: lightcyan;
+}
+.scroll .blocks .blockFour{
+  width: 200px;
+  height: 300px;
+  background-color: lightgoldenrodyellow;
+}
+.scroll .blocks .blockFive{
+  width: 800px;
+  height: 300px;
+  background-color: lightgreen;
+}
+
+.scroll .blocks .blockSix{
+  width: 400px;
+  height: 100px;
+  background-color: lightgrey;
+}
+
+.scroll .blocks .blockSeven{
+  width: 400px;
+  height: 100px;
+  background-color: lightpink;
+}
+
+.scroll .blocks .blockEight{
+  width: 200px;
+  height: 100px;
+  background-color: lightsalmon;
+}
+
+.scroll .blocks .blockNine{
+  width: 200px;
+  height: 100px;
+  background-color: lightskyblue;
+}
+
+
+.scroll .blocks .blockTen{
+  width: 200px;
+  height: 100px;
+  background-color: limegreen;
+}
+
+
+.scroll .blocks .blockEleven{
+  width: 500px;
+  height: 100px;
+  background-color: lightyellow;
+}
+
+.scroll .blocks .blockTwevel{
+  width: 500px;
+  height: 100px;
+  background-color: lightsteelblue;
+}
+
+
