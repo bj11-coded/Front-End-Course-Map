@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+</head>
+<body>
+    
+    <nav>
+        <picture>
+            <h1> Practice</h1>
+            <!-- <img src="" alt=""> -->
+        </picture>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('nav ul');
+        let menuOpen = false;
+
+        hamburger.addEventListener('click', () => {
+           if(menuOpen ==  false){
+            navLinks.style.display = 'block';
+                menuOpen = true;
+            }else{
+                navLinks.style.display = 'none';
+                menuOpen = false;
+           }
+        });
+    </script>
+</body>
+</html>
